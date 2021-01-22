@@ -3,13 +3,13 @@ body{
 	font: 1em sans-serif;
 }
 html{
-	width: 1364px;
+	width: 1340px;
 	/*fuente*/
 	font-family: 'Yusei Magic', sans-serif;
 }
 .banner{
 	height: 300px;
-	width: 1364px;
+	width: 1334px;
 	background: #2E322E;
 	color: #fff;
 	position: relative;
@@ -43,25 +43,15 @@ html{
 	display: inline-block;
 }
 a:hover{
-	text-decoration: underline;
 	background: #908C38; 
 	margin-top: -2;
  	padding-bottom: 14px;
 }
+.Links a{
+	text-decoration: none;
+}
 table{
 	width: 100%;
-}
-.Acerca a{
-	text-decoration: none;
-}
-.Servicios a{
-	text-decoration: none;
-}
-.Portafolio a{
-	text-decoration: none;
-}
-.footer a{
-	text-decoration: none;
 }
 .Servicios img{
 	width: 320px;
@@ -78,10 +68,10 @@ table{
 	font-size: 30px;
 }
 .Servicios h3{
-	padding: 5px 145px;
+	padding: 8px 155px;
 }
 .Portafolio img{
-	padding: 5px 90px;
+	padding: 5px 85px;
 	margin: 8px 8px;
 }
 form{
@@ -162,4 +152,3 @@ h2{
 .Acerca h3{
 	text-align: center;
 }
-
