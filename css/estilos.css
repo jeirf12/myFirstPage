@@ -67,8 +67,8 @@ table{
 	font-style: bold;
 	font-size: 30px;
 }
-.Servicios h3{
-	padding: 8px 155px;
+.Servicios h3,td{
+	padding: 4px 55px;
 }
 .Portafolio img{
 	padding: 5px 85px;

@@ -1,5 +1,5 @@
 var form  = document.getElementsByTagName('form')[0];
-var email = document.getElementById('mail');
+var email = document.getElementById('mail')[0];
 var error = document.querySelector('.error');
 
 email.addEventListener("input", function (event) {
