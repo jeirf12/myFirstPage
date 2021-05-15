@@ -1,138 +1,161 @@
-body{
-	background: #E1E0D1;
-	font: 1em sans-serif;
+body {
+  background: #e1e0d1;
+  font: 1em sans-serif;
 }
-html{
-	width: 1340px;
-	/*fuente*/
-	font-family: 'Yusei Magic', sans-serif;
+.switch-mode{
+  margin-left: 1rem;
 }
-.switch{
-	position: relative;
-	display: inline-block;
-	width: 60px;
-	height: 34px;
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
-.switch input{
-	opacity: 0;
-	width: 0;
-	height: 0;
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-.slider{
-	position: absolute;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #ccc;
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
 }
-.slider::before{
-	position: absolute;
-	content: "";
-	height: 26px;
-	width: 26px;
-	left: 4px;
-	bottom: 4px;
-	background-color: white;
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
 }
-input:checked + .slider{
-	background-color: #2196F3;
+input:checked + .slider {
+  background-color: #2196f3;
 }
-input:focus + .slider::before{
-	background-color: #2196F3;
+input:focus + .slider::before {
+  background-color: #2196f3;
 }
-input:checked + .slider::before{
-	transform: translateX(26px);
+input:checked + .slider::before {
+  transform: translateX(26px);
 }
-.slider.round{
-	border-radius: 34px;
+.slider.round {
+  border-radius: 34px;
 }
-.slider.round::before{
-	border-radius: 50%;
+.slider.round::before {
+  border-radius: 50%;
 }
-.change-color{
-	background-color: rgba(19, 19, 20, 0.965);
-	color: rgb(223, 215, 215);
+.change-color {
+  background-color: rgba(19, 19, 20, 0.965);
+  color: rgb(223, 215, 215);
 }
-.banner{
-	height: 300px;
-	width: 1334px;
-	background: #2E322E;
-	color: #fff;
-	position: relative;
+.banner {
+  height: 300px;
+  width: 1334px;
+  background: #2e322e;
+  color: #fff;
 }
-.imagen{
-	position: absolute;
-	top: 30px;
-	left: 1000px;
+.menu-icon{
+  display: none;
 }
-.presentacion{
-	width: 300px;
-	margin: 10px 50px;
-	padding: 70px;
+.banner img {
+  display: block;
+  float: left;
+  margin-left: 320%;
+  margin-top: -68%;
 }
-.presentacion h1{
-	margin: 0;
-	padding: 0;
-	font-size: 25px;
+.presentacion {
+  width: 300px;
+  margin: 10px 50px;
+  padding: 70px;
 }
-.Encabezado li a{
-	color: #4F614F;
-	text-decoration: none;
-	display: inline-block;
-	position: relative;
-	top: 10px;
- 	left: 540px;
-	padding: 10px 10px;
-	margin: 1px 8px 1px 0px;
+.presentacion h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
 }
-.Encabezado li{
-	display: inline-block;
+.header {
+  background: #333;
+  color: white;
+  padding: 2rem 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
 }
-a:hover{
-	background: #908C38; 
-	margin-top: -2;
- 	padding-bottom: 14px;
+.header a {
+  color: #4f614f;
+  text-decoration: none;
 }
-.Links a{
-	text-decoration: none;
+.container h2 {
+  letter-spacing: 15px;
+  font-size: 1.7em;
 }
-table{
-	width: 100%;
+.logo-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+	flex-wrap: wrap;
 }
-.Servicios img{
-	width: 320px;
-	height: 320px;
-	padding: 5px 50px;
-	margin: 5px 5px;
-	border-radius: 50%;
-	float: left;
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.Encabezado h2{
-	position: relative;
-	left:50px;
-	font-style: bold;
-	font-size: 30px;
+.navigation ul li {
+  display: inline-block;
 }
-.Servicios h3,td{
-	padding: 4px 55px;
+.navigation ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.4s linear;
+  border-radius: 5px;
 }
-.Portafolio img{
-	padding: 5px 85px;
-	margin: 8px 8px;
+.main {
+  padding-top: 12rem;
 }
-select{
-	cursor: pointer;
+a:hover {
+  background: #908c38;
+  margin-top: -2;
+  padding-bottom: 14px;
 }
-select::before{
-	cursor: pointer;
+.Links a {
+  text-decoration: none;
 }
-form{
-	margin: 0 auto;
+table {
+  width: 100%;
+}
+.Servicios img {
+  width: 320px;
+  height: 320px;
+  padding: 5px 50px;
+  margin: 5px 5px;
+  border-radius: 50%;
+  float: left;
+}
+.Servicios h3,
+td {
+  padding: 4px 55px;
+}
+.Portafolio img {
+  padding: 5px 85px;
+  margin: 8px 8px;
+}
+select {
+  cursor: pointer;
+}
+select::before {
+  cursor: pointer;
+}
+form {
+  margin: 0 auto;
   width: 400px;
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 form div + div {
@@ -143,14 +166,17 @@ label {
   width: 90px;
   text-align: right;
 }
-input, textarea , select{
+input,
+textarea,
+select {
   font: 1em sans-serif;
   width: 300px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 1px solid #999;
 }
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #000;
 }
 textarea {
@@ -159,13 +185,13 @@ textarea {
   resize: vertical;
 }
 .button {
-  padding-left: 90px; 
+  padding-left: 90px;
 }
 button {
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 
-input[type=email]{
+input[type="email"] {
   -webkit-appearance: none;
   margin: 0;
 
@@ -176,23 +202,23 @@ input[type=email]{
   box-sizing: border-box;
 }
 
-input:invalid{
+input:invalid {
   border-color: #900;
-  background-color: #FDD;
+  background-color: #fdd;
 }
 
 input:focus:invalid {
   outline: none;
 }
 .error {
-  width  : 100%;
+  width: 100%;
   padding: 0;
- 
+
   font-size: 80%;
   color: white;
   background-color: #900;
   border-radius: 0 0 5px 5px;
- 
+
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -200,9 +226,46 @@ input:focus:invalid {
 .error.active {
   padding: 0.3em;
 }
-h2{
-	text-align: center;
+h2 {
+  text-align: center;
 }
-.Acerca h3{
-	text-align: center;
+.Acerca h3 {
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .container h2{
+    margin-right: 120rem;
+    margin-left: 8px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+  }
+  .menu-icon{
+    display: block;
+    cursor: pointer;
+    padding: 0.3rem 1rem;
+  }
+  .navigation {
+    width: 100%;
+		margin-top: 1rem;
+  }
+  .navigation ul {
+    display: none;
+  }
+  .navigation ul.show {
+    display: block;
+  }
+  .navigation ul li {
+    display: block;
+  }
+  .navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+  }
+  .main {
+    padding-top: 15rem;
+  }
 }

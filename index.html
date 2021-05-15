@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>¡My First Page!</title>
     <link rel="stylesheet" type="text/css" href="css/estilos.css" />
     <!--Colocar imagen o logotipo a la pagina-->
@@ -21,127 +22,137 @@
       href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
       rel="stylesheet"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/menu.js"></script>
   </head>
   <body class="body change-color">
-    <header>
-      <nav title="Encabezado" class="Encabezado">
-        <a id="Inicio"></a>
-        <ul>
-          <li>Modo<br> Oscuro</li>
+    <a id="Inicio"></a>
+    <header class="header">
+      <div title="Encabezado" class="container logo-nav-container">
+        <span class="menu-icon"> Menu</span>
+        <div class="switch-mode">
+          <h3>Modo<br />Oscuro</h3>
           <label class="switch">
             <input class="toggle" type="checkbox" />
             <span class="slider round"></span>
           </label>
-          <script src="js/storage.js"></script>
-          <li><h2>Jhonfer</h2></li>
-          <li><a href="#Inicio" title="Inicio">Inicio</a></li>
-          <li><a href="#Acerca" title="Acerca de mi">Acerca de mi</a></li>
-          <li><a href="#Servicios" title="Servicios">Servicios</a></li>
-          <li><a href="#Portafolio" title="Portafolio">Portafolio</a></li>
-          <li><a href="#Contacto" title="Contacto">Contacto</a></li>
-        </ul>
-      </nav>
+        </div>
+        <script src="js/storage.js"></script>
+        <h2>Jhonfer</h2>
+        <nav class="navigation">
+          <ul>
+            <li><a href="#Inicio" title="Inicio" class="inicio">Inicio</a></li>
+            <li><a href="#Acerca" title="Acerca de mi" class="acerca">Acerca de mi</a></li>
+            <li><a href="#Servicios" title="Servicios" class="servicios">Servicios</a></li>
+            <li><a href="#Portafolio" title="Portafolio" class="portafolio">Portafolio</a></li>
+            <li><a href="#Contacto" title="Contacto" class="contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="main">
       <div title="bannerPrincipal" class="banner">
         <article>
           <div class="presentacion">
             <h3><b>Bienvenido,</b></h3>
             <h1><b>YO SOY JHONFER RUIZ</b></h1>
             <h3><b>Ingeniero de Sistemas</b></h3>
-          </div>
-          <div class="imagen">
             <img src="images/Foto.jpg" alt="foto de Perfil" width="200" />
           </div>
         </article>
       </div>
-    </header>
 
-    <section title="Acerca de mi" class="Acerca">
       <a id="Acerca"><h2>Acerca de Mi</h2></a>
-      <article>
-        <table>
-          <tr>
-            <td><h3>Perfil</h3></td>
-            <td><h3>Cursos</h3></td>
-            <td><h3>Experiencia</h3></td>
-          </tr>
-          <tr>
-            <td>
-              Soy una persona muy entusiasta y enfocada en lo que quiero,<br />
-              busco lograr explotar mis capacidades hasta el punto máximo<br />
-              y sacar provecho de cada una de mis debilidades como ser.
-            </td>
-            <td>
-              <ul>
-                <li>Fotografía Digital</li>
-                <li>Desarrollador web</li>
-                <li>Técnico en sistemas</li>
-              </ul>
-            </td>
-            <td>
-              <ol>
-                <li>Monitor de facultad - Universidad del cauca</li>
-                <li>Investigador de las nuevas TIC - Universidad del Cauca</li>
-              </ol>
-            </td>
-          </tr>
-        </table>
-      </article>
-      <hr />
-    </section>
-    <section title="Servicios" class="Servicios">
+      <section title="Acerca de mi" class="Acerca">
+        <article>
+          <table>
+            <tr>
+              <td><h3>Perfil</h3></td>
+              <td><h3>Cursos</h3></td>
+              <td><h3>Experiencia</h3></td>
+            </tr>
+            <tr>
+              <td>
+                Soy una persona muy entusiasta y enfocada en lo que quiero,<br />
+                busco lograr explotar mis capacidades hasta el punto máximo<br />
+                y sacar provecho de cada una de mis debilidades como ser.
+              </td>
+              <td>
+                <ul>
+                  <li>Fotografía Digital</li>
+                  <li>Desarrollador web</li>
+                  <li>Técnico en sistemas</li>
+                </ul>
+              </td>
+              <td>
+                <ol>
+                  <li>Monitor de facultad - Universidad del cauca</li>
+                  <li>
+                    Investigador de las nuevas TIC - Universidad del Cauca
+                  </li>
+                </ol>
+              </td>
+            </tr>
+          </table>
+        </article>
+        <hr />
+      </section>
+
       <a id="Servicios"><h2>Servicios</h2></a>
-      <article>
-        <div>
-          <img src="images/images1.jpg" alt="Web" width="250" />
-          <img src="images/images2.jpg" alt="basesDatos" width="250" />
-          <img src="images/images3.jpg" alt="Operativos" width="250" />
-        </div>
-        <table>
-          <tr>
-            <td><h3>Servicio Web</h3></td>
-            <td><h3>Bases de Datos</h3></td>
-            <td><h3>Sistemas Operativos</h3></td>
-          </tr>
-          <tr>
-            <td>
-              <p>
-                <li>Páginas web (Landing page, Dinámicas)</li>
-                <li>fronted Angular, django</li>
-                <li>Backend Nodejs, javascript</li>
-              </p>
-            </td>
-            <td>
-              <p>
-                Bases de datos relacionales
-                <li>MySql</li>
-                <li>Oracle</li>
-              </p>
-            </td>
-            <td>
-              <p>
-                <li>Manejo de windows</li>
-                <li>Linux (especializado en sistemas unix)</li>
-              </p>
-            </td>
-          </tr>
-        </table>
-      </article>
-      <hr />
-    </section>
-    <aside title="Portafolio" class="Portafolio">
+      <section title="Servicios" class="Servicios">
+        <article>
+          <div>
+            <img src="images/images1.jpg" alt="Web" width="250" />
+            <img src="images/images2.jpg" alt="basesDatos" width="250" />
+            <img src="images/images3.jpg" alt="Operativos" width="250" />
+          </div>
+          <table>
+            <tr>
+              <td><h3>Servicio Web</h3></td>
+              <td><h3>Bases de Datos</h3></td>
+              <td><h3>Sistemas Operativos</h3></td>
+            </tr>
+            <tr>
+              <td>
+                <p>
+                  <li>Páginas web (Landing page, Dinámicas)</li>
+                  <li>fronted Angular, django</li>
+                  <li>Backend Nodejs, javascript</li>
+                </p>
+              </td>
+              <td>
+                <p>
+                  Bases de datos relacionales
+                  <li>MySql</li>
+                  <li>Oracle</li>
+                </p>
+              </td>
+              <td>
+                <p>
+                  <li>Manejo de windows</li>
+                  <li>Linux (especializado en sistemas unix)</li>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </article>
+        <hr />
+      </section>
       <a id="Portafolio"><h2>Portafolio</h2></a>
-      <div>
-        <img src="images/images4.jpg" alt="Web" width="250" />
-        <img src="images/images6.jpg" alt="basesDatos" width="250" />
-        <img src="images/images8.jpg" alt="Operativos" width="250" />
-        <img src="images/images5.png" alt="Web" width="250" />
-        <img src="images/images7.jpg" alt="basesDatos" width="250" />
-        <img src="images/images9.jpg" alt="Operativos" width="250" />
-      </div>
-    </aside>
-    <hr />
+      <aside title="Portafolio" class="Portafolio">
+        <div>
+          <img src="images/images4.jpg" alt="Web" width="250" />
+          <img src="images/images6.jpg" alt="basesDatos" width="250" />
+          <img src="images/images8.jpg" alt="Operativos" width="250" />
+          <img src="images/images5.png" alt="Web" width="250" />
+          <img src="images/images7.jpg" alt="basesDatos" width="250" />
+          <img src="images/images9.jpg" alt="Operativos" width="250" />
+        </div>
+      </aside>
+      <hr />
+    </div>
+    <a id="Contacto"><h2>Contacto</h2></a>
     <footer title="contacto" class="footer">
-      <a id="Contacto"><h2>Contacto</h2></a>
       <form method="post">
         <div>
           <label for="Nombre">Nombre:</label>
