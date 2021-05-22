@@ -3,7 +3,7 @@ jQuery('document').ready(function($){
     menu = $('.navigation ul'),
     iniBtn = $('.inicio'),
     acercaBtn = $('.acerca'),
-    servicioBtn = $('.servicio'),
+    servicioBtn = $('.servicios'),
     portafolioBtn = $('.portafolio'),
     contactoBtn = $('.contacto');
 

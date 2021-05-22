@@ -6,30 +6,19 @@
     <title>¡My First Page!</title>
     <link rel="stylesheet" type="text/css" href="css/estilos.css" />
     <!--Colocar imagen o logotipo a la pagina-->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="images/IMG_20171105_094601083_HDR.ico"
-    />
+    <link rel="shortcut icon" type="image/x-icon" href="images/IMG_20171105_094601083_HDR.ico"/>
     <!--iconos-->
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/>
     <!--Fuentes de la pagina-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/menu.js"></script>
   </head>
   <body class="body change-color">
-    <a id="Inicio"></a>
+    <a id="inicio"></a>
     <header class="header">
       <div title="Encabezado" class="container logo-nav-container">
-        <span class="menu-icon">Menu</span>
+        <span title="menu" class="menu-icon"><i class='bx bx-menu'></i></span>
         <div class="switch-mode">
           <h3>Modo<br />Oscuro</h3>
           <label class="switch">
@@ -37,29 +26,14 @@
             <span class="slider round"></span>
           </label>
         </div>
-        <script src="js/storage.js"></script>
         <h2>Jhonfer</h2>
         <nav class="navigation">
           <ul>
-            <li><a href="#Inicio" title="Inicio" class="inicio">Inicio</a></li>
-            <li>
-              <a href="#Acerca" title="Acerca de mi" class="acerca"
-                >Acerca de mi</a
-              >
-            </li>
-            <li>
-              <a href="#Servicios" title="Servicios" class="servicios"
-                >Servicios</a
-              >
-            </li>
-            <li>
-              <a href="#Portafolio" title="Portafolio" class="portafolio"
-                >Portafolio</a
-              >
-            </li>
-            <li>
-              <a href="#Contacto" title="Contacto" class="contacto">Contacto</a>
-            </li>
+            <li><a href="#inicio" title="Inicio" class="inicio">Inicio</a></li>
+            <li><a href="#acerca" title="Acerca de mi" class="acerca">Acerca de mi</a></li>
+            <li><a href="#servicios" title="Servicios" class="servicios">Servicios</a></li>
+            <li><a href="#portafolio" title="Portafolio" class="portafolio">Portafolio</a></li>
+            <li><a href="#contacto" title="Contacto" class="contacto">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -75,8 +49,7 @@
           </div>
         </article>
       </div>
-
-      <a id="Acerca"><h2>Acerca de Mi</h2></a>
+      <a id="acerca"></a><h2>Acerca de Mi</h2>
       <section title="Acerca de mi" class="Acerca">
         <article>
           <table>
@@ -116,7 +89,7 @@
         <hr />
       </section>
 
-      <a id="Servicios"><h2>Servicios</h2></a>
+      <a id="servicios"><h2>Servicios</h2></a>
       <section title="Servicios" class="Servicios">
         <article>
           <table>
@@ -153,7 +126,7 @@
         </article>
         <hr />
       </section>
-      <a id="Portafolio"><h2>Portafolio</h2></a>
+      <a id="portafolio"><h2>Portafolio</h2></a>
       <aside title="Portafolio" class="Portafolio">
         <div>
           <img src="images/images4.jpg" alt="Web" width="250" />
@@ -166,7 +139,7 @@
       </aside>
       <hr />
     </div>
-    <a id="Contacto"><h2>Contacto</h2></a>
+    <a id="contacto"><h2>Contacto</h2></a>
     <footer title="contacto" class="footer">
       <form method="post">
         <div>
@@ -193,23 +166,21 @@
         </div>
         <div class="button">
           <button type="submit" onclick='alert("Mensaje enviado")'>
-            Enviar
+            <i class='bx bxs-send' >Enviar</i>
           </button>
         </div>
       </form>
-      <script src="js/validacion.js"></script>
     </footer>
+    <!-- Scripts de ejecución -->
+    <script src="js/menu.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/validacion.js"></script>
+
     <div class="Links" id="Links">
-      <a
-        target="_blank"
-        class="bx bxl-facebook"
-        href="https://www.facebook.com/charon.xiv0/"
-      ></a>
-      <a
-        target="_blank"
-        class="bx bxl-instagram"
-        href="https://www.instagram.com/charon.xiv0/"
-      ></a>
+      <a target="_blank" class="bx bxl-facebook-square" href="https://www.facebook.com/charon.xiv0/"></a>
+      <a target="_blank" class="bx bxl-instagram" href="https://www.instagram.com/charon.xiv0/"></a>
+      <a target="_blank" class="bx bxl-github" href="https://github.com/jeirf12"></a>
+      <i class='bx bx-bot'></i>
     </div>
   </body>
 </html>

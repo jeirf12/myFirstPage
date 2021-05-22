@@ -35,10 +35,10 @@ body {
   background-color: white;
 }
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #4f614f;
 }
 input:focus + .slider::before {
-  background-color: #2196f3;
+  background-color: #4f614f;
 }
 input:checked + .slider::before {
   transform: translateX(26px);
@@ -113,18 +113,34 @@ input:checked + .slider::before {
   display: block;
   padding: 0.5rem 1rem;
   transition: all 0.4s linear;
+  transition: transform 0.5s;
   border-radius: 5px;
 }
-.main {
-  padding-top: 12rem;
-}
-a:hover {
+.navigation a:hover{
+  transform: scale(1.1, 1.2);
   background: #908c38;
   margin-top: -2;
   padding-bottom: 14px;
 }
-.Links a {
+.Links a{
   text-decoration: none;
+  font-size: 60px;
+  color: #4f614f;
+  margin-top: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  transition: transform 0.5s;
+}
+.Links a:hover{
+  transform: translateY(-1rem);
+}
+.Links i{
+  font-size: 60px;
+  color: #4f614f;
+  margin-left: 10%;
+}
+.main {
+  padding-top: 12rem;
 }
 table {
   width: 100%;
@@ -160,7 +176,7 @@ select {
   width: 300px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 1px solid #999;
+  border: 1px solid #4f614f;
 }
 input:focus,
 textarea:focus {
@@ -177,8 +193,8 @@ textarea {
 button {
   margin-left: 0.5em;
   cursor: pointer;
+  font-size: 20px;
 }
-
 input[type="email"] {
   -webkit-appearance: none;
   margin: 0;
@@ -194,7 +210,6 @@ input:invalid {
   border-color: #900;
   background-color: #fdd;
 }
-
 input:focus:invalid {
   outline: none;
 }
@@ -210,7 +225,6 @@ input:focus:invalid {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 .error.active {
   padding: 0.3em;
 }
@@ -227,7 +241,6 @@ h2 {
   padding: 5px 85px;
   margin: 10px 10px;
 }
-
 @media only screen and (max-width: 770px) {
   .switch-mode{
     width: 20%;
@@ -254,6 +267,8 @@ h2 {
     display: block;
     cursor: pointer;
     padding: 0.3rem 1rem;
+    color: #4f614f;
+    font-size: 60px;
   }
   .navigation {
     width: 100%;
@@ -284,6 +299,13 @@ h2 {
   .Portafolio img {
     padding: 5px 50px;
     align-items: center;
+  }
+  .Links a{
+    margin-left: 14%;
+  }
+  .Links i{
+    display: block;
+    margin-left: 46.5%;
   }
 }
 @media only screen and (max-width: 560px) {
@@ -319,6 +341,12 @@ h2 {
   select {
     width: 145px;
   }
+  .Links a{
+    margin-left: 11%;
+  }
+  .Links i{
+    margin-left: 45%;
+  }
 }
 @media only screen and (max-width: 480px) {
   
@@ -353,5 +381,43 @@ h2 {
   select {
     width: 130px;
   }
+  .Links a{
+    margin-left: 6.5%;
+  }
+  .Links i{
+    margin-left: 40%;
+  }
 }
 
+@media only screen and (max-width: 380px) {
+  .Links a{
+    margin-left: 5%;
+  }
+  .Links i{
+    margin-left: 40%;
+  }
+}
+@media only screen and (max-width: 324px) {
+  .banner{
+    width: 115%;
+    height: 450px;
+  }
+  .Links a{
+    margin-left: 2.6%;
+  }
+  .Links i{
+    margin-left: 38%;
+  }
+}
+@media only screen and (max-width: 290px) {
+  .banner{
+    width: 132%;
+    height: 450px;
+  }
+  .Links a{
+    margin-left: -1%;
+  }
+  .Links i{
+    margin-left: 33%;
+  }
+}
