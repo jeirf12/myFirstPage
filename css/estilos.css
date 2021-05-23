@@ -2,8 +2,13 @@ body {
   background: #e1e0d1;
   font: 1em sans-serif;
 }
+.switch-header{
+  position: relative;
+  right: 48%;
+}
 .switch-mode{
   margin-left: 1rem;
+  margin-top: -2rem;
 }
 .switch {
   position: relative;
@@ -81,7 +86,7 @@ input:checked + .slider::before {
 .header {
   background: #333;
   color: white;
-  padding: 2rem 0;
+  padding: 1rem 0;
   position: fixed;
   left: 0;
   top: 0;
@@ -91,9 +96,13 @@ input:checked + .slider::before {
   color: #4f614f;
   text-decoration: none;
 }
+.main {
+  padding-top: 8rem;
+}
 .container h2 {
   letter-spacing: 15px;
   font-size: 1.7em;
+  margin-left: 30%;
 }
 .logo-nav-container {
   display: flex;
@@ -139,9 +148,7 @@ input:checked + .slider::before {
   color: #4f614f;
   margin-left: 10%;
 }
-.main {
-  padding-top: 12rem;
-}
+
 table {
   width: 100%;
 }
@@ -242,8 +249,12 @@ h2 {
   margin: 10px 10px;
 }
 @media only screen and (max-width: 770px) {
+  .header{
+    padding: 0.5rem 0;
+    margin: 0;
+  }
   .switch-mode{
-    width: 20%;
+    margin-left: 290%;
   }
   .banner{
     width: 100%;
@@ -277,7 +288,7 @@ h2 {
   .navigation ul {
     display: none;
   }
-  .navigation ul.show {
+  .navigation ul.show{
     display: block;
   }
   .navigation ul li {
@@ -290,7 +301,7 @@ h2 {
     border-radius: 5px;
   }
   .main {
-    padding-top: 15rem;
+    padding-top: 9rem;
   }
   .Servicios img {
     width: 120px;
@@ -308,10 +319,32 @@ h2 {
     margin-left: 46.5%;
   }
 }
-@media only screen and (max-width: 560px) {
-  
+@media only screen and (max-width: 705px) {
+  .banner{
+    width: 104.5%;
+  }
+}
+@media only screen and (max-width: 677px) {
+  .banner{
+    width: 106.5%;
+  }
+}
+@media only screen and (max-width: 664px) {
+  .banner{
+    width: 110.5%;
+  }
+}
+@media only screen and (max-width: 635px) {
+  .banner{
+    width: 119.5%;
+  }
+}
+@media only screen and (max-width: 585px) {
   .switch-mode{
-    width: 20%;
+    margin-left: 240%;
+  }
+  .container h2{
+    font-size: 1.3em;
   }
   .banner{
     width: 100%;
@@ -349,9 +382,8 @@ h2 {
   }
 }
 @media only screen and (max-width: 480px) {
-  
   .switch-mode{
-    width: 20%;
+    margin-left: 200%;
   }
   .banner{
     width: 100.5%;
@@ -390,6 +422,9 @@ h2 {
 }
 
 @media only screen and (max-width: 380px) {
+  .switch-mode{
+    margin-left: 180%;
+  }
   .Links a{
     margin-left: 5%;
   }
@@ -398,6 +433,9 @@ h2 {
   }
 }
 @media only screen and (max-width: 324px) {
+  .switch-mode{
+    margin-left: 150%;
+  }
   .banner{
     width: 115%;
     height: 450px;
@@ -410,6 +448,9 @@ h2 {
   }
 }
 @media only screen and (max-width: 290px) {
+  .switch-mode{
+    display: none;
+  }
   .banner{
     width: 132%;
     height: 450px;

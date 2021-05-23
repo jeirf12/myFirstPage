@@ -25,4 +25,4 @@ check.addEventListener('click', function(){
     body.classList.remove('change-color')
     storage.removeItem('oscuro')
   }
-})
+});
