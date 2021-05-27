@@ -10,7 +10,7 @@ const comprobarOscuro = oscuro => {
     body.classList.add('change-color')
     check.checked = true
   }else{
-    body.classList.remove('change-color')
+    body.classList.toggle('change-color')
     check.checked = false
   }
 }
@@ -22,7 +22,7 @@ check.addEventListener('click', function(){
     body.classList.add('change-color')
     storage.setItem('oscuro', true)
   }else{
-    body.classList.remove('change-color')
+    body.classList.toggle('change-color')
     storage.removeItem('oscuro')
   }
 });

@@ -1,3 +1,6 @@
+:root{
+  scroll-behavior: smooth;
+}
 body {
   background: #e1e0d1;
   font: 1em sans-serif;
@@ -254,6 +257,7 @@ h2 {
     margin: 0;
   }
   .switch-mode{
+    margin: 0;
     margin-left: 290%;
   }
   .banner{
@@ -268,11 +272,7 @@ h2 {
     margin-left: 120%;
   }
   .container h2{
-    margin-right: 120rem;
-    margin-left: 8px;
-    margin-top: 0;
-    margin-bottom: 0;
-    display: inline-block;
+    display: none;
   }
   .menu-icon{
     display: block;
@@ -280,6 +280,7 @@ h2 {
     padding: 0.3rem 1rem;
     color: #4f614f;
     font-size: 60px;
+    box-shadow: 0 0 6px rgba(0, 0, 0,.4);
   }
   .navigation {
     width: 100%;
