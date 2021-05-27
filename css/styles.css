@@ -10,8 +10,8 @@ body {
   right: 48%;
 }
 .switch-mode{
-  margin-left: 1rem;
   margin-top: -2rem;
+  margin-left: 1rem;
 }
 .switch {
   position: relative;
@@ -257,7 +257,7 @@ h2 {
     margin: 0;
   }
   .switch-mode{
-    margin: 0;
+    margin-top: -1rem;
     margin-left: 290%;
   }
   .banner{
@@ -280,7 +280,6 @@ h2 {
     padding: 0.3rem 1rem;
     color: #4f614f;
     font-size: 60px;
-    box-shadow: 0 0 6px rgba(0, 0, 0,.4);
   }
   .navigation {
     width: 100%;
