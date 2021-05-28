@@ -15,7 +15,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body class="body change-color">
-    <a id="inicio"></a>
     <header class="header">
       <div title="Encabezado" class="container logo-nav-container">
         <h2>Jhonfer</h2>
@@ -40,7 +39,7 @@
         </nav>
       </div>
     </header>
-    <div class="main">
+    <div id="inicio" class="main">
       <div title="bannerPrincipal" class="banner">
         <article>
           <div class="presentacion">
@@ -51,8 +50,8 @@
           </div>
         </article>
       </div>
-      <a id="acerca"></a><h2>Acerca de Mi</h2>
-      <section title="Acerca de mi" class="Acerca">
+      <section id="acerca" title="Acerca de mi" class="Acerca">
+        <h2>Acerca de Mi</h2>
         <article>
           <table>
             <tr>
@@ -88,11 +87,10 @@
             </tr>
          </table>
         </article>
-        <hr />
+        <div class="line"></div>
       </section>
-
-      <a id="servicios"><h2>Servicios</h2></a>
-      <section title="Servicios" class="Servicios">
+      <section id="servicios" title="Servicios" class="Servicios">
+        <h2>Servicios</h2>
         <article>
           <table>
             <tr>
@@ -126,10 +124,10 @@
             </tr>
           </table>
         </article>
-        <hr />
+        <div class="line"></div>
       </section>
-      <a id="portafolio"><h2>Portafolio</h2></a>
-      <aside title="Portafolio" class="Portafolio">
+      <aside id="portafolio" title="Portafolio" class="Portafolio">
+        <h2>Portafolio</h2>
         <div>
           <img src="images/images4.jpg" alt="Web" width="250" />
           <img src="images/images6.jpg" alt="basesDatos" width="250" />
@@ -139,10 +137,10 @@
           <img src="images/images9.jpg" alt="Operativos" width="250" />
         </div>
       </aside>
-      <hr />
+      <div class="line"></div>
     </div>
-    <a id="contacto"><h2>Contacto</h2></a>
-    <footer title="contacto" class="footer">
+    <footer id="contacto" title="contacto" class="footer">
+      <h2>Contacto</h2>
       <form method="post">
         <div>
           <label for="Nombre">Nombre:</label>
@@ -178,7 +176,7 @@
     <script src="js/storage.js"></script>
     <script src="js/validation.js"></script>
 
-    <div class="Links" id="Links">
+    <div class="Links">
       <a target="_blank" class="bx bxl-facebook-square" href="https://www.facebook.com/charon.xiv0/"></a>
       <a target="_blank" class="bx bxl-instagram" href="https://www.instagram.com/charon.xiv0/"></a>
       <a target="_blank" class="bx bxl-github" href="https://github.com/jeirf12"></a>
