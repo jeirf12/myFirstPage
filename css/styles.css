@@ -66,6 +66,8 @@ input:checked + .slider::before {
   width: 1334px;
   background: #2e322e;
   color: #fff;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 .menu-icon{
   display: none;
@@ -101,6 +103,8 @@ input:checked + .slider::before {
 }
 .main {
   padding-top: 8rem;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 .container h2 {
   letter-spacing: 15px;
@@ -114,7 +118,7 @@ input:checked + .slider::before {
   flex-wrap: wrap;
 }
 .navigation ul {
-  margin: 0;
+  margin: 0.5rem;
   padding: 0;
   list-style: none;
 }
@@ -136,6 +140,14 @@ input:checked + .slider::before {
 }
 .Acerca{
   padding-bottom: 0.1px;
+}
+.footer{
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+.Links{
+  animation-duration: 2s;
+  animation-name: slidein;
 }
 .Links a{
   text-decoration: none;
@@ -472,3 +484,14 @@ h2 {
     margin-left: 33%;
   }
 }
+@keyframes slidein{
+  from{
+    margin-left: 100%;
+    width: 300%;
+  }
+  to{
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
