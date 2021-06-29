@@ -1,20 +1,18 @@
 html {
   width: 100%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 body {
   background: #e1e0d1;
   font: 1em sans-serif;
   padding: 0 2% 0 2%;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 .switch-header{
   position: relative;
-  right: 48%;
-}
-.switch-mode{
-  margin-top: -24%;
-  margin-left: 36%;
+  right: 46%;
 }
 .switch {
   position: relative;
@@ -65,32 +63,26 @@ input:checked + .slider::before {
   width: 100%;
   background: #2e322e;
   color: #fff;
-  animation-duration: 3s;
-  animation-name: slidein;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+.banner p{
+  padding-left: 10%;
+  font-size: 30px;
+  font-weight: bold;
+  white-space: pre-line;
+}
+.banner img{
+  margin: 4%;
+  padding-left: 40%;
 }
 .menu-icon{
   display: none;
 }
-.presentacion{
-  padding: 1% 5% 1% 5%;
-  display: flex;
-  flex-flow: column wrap-reverse;
-  align-content: flex-end;
-}
-.presentacion h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 25px;
-}
-.presentacion img{
-  float: left;
-  padding-left: 65%;
-  margin-top: -12%;
-}
 .header {
   background: #333;
   color: white;
-  padding: 1% 0;
   position: fixed;
   left: 0;
   top: 0;
@@ -101,12 +93,13 @@ input:checked + .slider::before {
   text-decoration: none;
 }
 .main {
-  padding-top: 8rem;
-  animation-duration: 3s;
-  animation-name: slidein;
+  padding-top: 9vw;
+}
+.container{
+  padding: 0 1% 1% 1%;
 }
 .container h2 {
-  letter-spacing: 15px;
+  letter-spacing: 18px;
   font-size: 1.7em;
   margin-left: 30%;
 }
@@ -114,25 +107,23 @@ input:checked + .slider::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .navigation ul {
-  margin: 0.5rem;
-  padding: 0;
-  list-style: none;
+  margin: 1rem;
 }
 .navigation ul li {
   display: inline-block;
 }
 .navigation ul li a {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   transition: all 0.4s linear;
   transition: transform 0.5s;
   border-radius: 5px;
 }
 .navigation a:hover{
-  transform: scale(1.1, 1.2);
+  transform: scale(1.1, 1.1);
   background: #908c38;
   margin-top: -2;
   padding-bottom: 14px;
@@ -141,19 +132,12 @@ input:checked + .slider::before {
   padding-bottom: 0.1px;
 }
 .footer{
-  animation-duration: 2s;
-  animation-name: slidein;
   background-image: url("../images/EnConstruccion.svg");
   background-repeat: no-repeat;
   background-size: 110% 180%;
-  background-attachment: absolute;
   background-position: center;
   margin-left: 5%;
   margin-right: 5%;
-}
-.Links{
-  animation-duration: 2s;
-  animation-name: slidein;
 }
 .Links a{
   text-decoration: none;

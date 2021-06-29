@@ -5,31 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>¡My First Page!</title>
     <!--Normaliza pagina-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet"/>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      rel="stylesheet"
+    />
     <!--estilos por defecto-->
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <!--Colocar imagen o logotipo a la pagina-->
-    <link rel="shortcut icon" type="image/x-icon" href="images/icon.svg"/>
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.svg" />
     <!--iconos-->
-    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/>
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <!--Fuentes de la pagina-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body class="body change-color">
     <header class="header">
       <div title="Encabezado" class="container logo-nav-container">
         <h2>Jhonfer</h2>
-        <span class="menu-icon"><i class='bx bx-menu'></i></span>
+        <span class="menu-icon"><i class="bx bx-menu"></i></span>
         <div class="switch-header">
-        <div class="switch-mode">
           <h3>Modo Oscuro</h3>
           <label class="switch">
             <input class="toggle" type="checkbox" />
             <span class="slider round"></span>
           </label>
-        </div>
         </div>
         <nav class="navigation">
           <ul>
@@ -44,113 +51,107 @@
     </header>
     <div id="inicio" class="main">
       <div title="bannerPrincipal" class="banner">
-        <article>
-          <div class="presentacion">
-            <h3>Bienvenido,</h3>
-            <h1>YO SOY JHONFER RUIZ</h1>
-            <h3>Ingeniero de Sistemas</h3>
-            <img src="images/Foto.jpg" alt="foto de Perfil" />
-          </div>
-        </article>
+        <p>
+          Bienvenido, 
+          YO SOY JHONFER RUIZ 
+          Ingeniero de Sistemas
+        </p>
+        <img src="images/Foto.jpg" alt="foto de Perfil" />
       </div>
       <div id="acerca" title="Acerca de mi" class="Acerca">
         <h2>Acerca de Mi</h2>
-        <article>
-          <table>
-            <td>
-              <h3>Perfil</h3>
-              <p>Soy una persona muy entusiasta y enfocado en lo que quiero</p>
-              <p>busco lograr explotar mis capacidades hasta el punto máximo</p>
-              <p> y sacar provecho de cada una de mis debilidades como ser.</p>
-            </td>
-            <td>
-              <h3>Cursos</h3>
-              <ul>
-                <li>Fotografía Digital</li>
-                <li>Desarrollador web</li>
-                <li>Técnico en sistemas</li>
-              </ul>
-            </td>
-            <td>
-              <h3>Experiencia</h3>
-              <ol>
-                <li>Monitor de facultad - Universidad del cauca</li>
-                <li>Investigador de las nuevas TIC - Universidad del Cauca</li>
-              </ol>
-            </td>
-         </table>
-        </article>
+        <table>
+          <td>
+            <h3>Perfil</h3>
+            <p>Soy una persona muy entusiasta y enfocado en lo que quiero</p>
+            <p>busco lograr explotar mis capacidades hasta el punto máximo</p>
+            <p>y sacar provecho de cada una de mis debilidades como ser.</p>
+          </td>
+          <td>
+            <h3>Cursos</h3>
+            <ul>
+              <li>Fotografía Digital</li>
+              <li>Desarrollador web</li>
+              <li>Técnico en sistemas</li>
+            </ul>
+          </td>
+          <td>
+            <h3>Experiencia</h3>
+            <ol>
+              <li>Monitor de facultad - Universidad del cauca</li>
+              <li>Investigador de las nuevas TIC - Universidad del Cauca</li>
+            </ol>
+          </td>
+        </table>
       </div>
       <div id="servicios" class="line"></div>
       <div title="Servicios" class="Servicios">
         <h2>Servicios</h2>
-        <article>
-          <table>
-            <tr>
-              <td>
-                <figure>
-                  <img src="images/images1.jpg" alt="Web"/>
-                  <figcaption>Servicio Web</figcaption>
-                </figure>
-                <p>
-                  <li>Páginas web (Landing page, Dinámicas)</li>
-                  <li>fronted Angular, django</li>
-                  <li>Backend Nodejs, javascript</li>
-                </p>
-              </td>
-              <td>
-                <figure>
-                  <img src="images/images2.jpg" alt="Web" width="250" />
-                  <figcaption>Bases de Datos</figcaption>
-                </figure>
-                <p>
-                  Bases de datos relacionales
-                  <li>MySql</li>
-                  <li>Oracle</li>
-                </p>
-              </td>
+        <table>
+          <tr>
+            <td>
+              <figure>
+                <img src="images/images1.jpg" alt="Web" />
+                <figcaption>Servicio Web</figcaption>
+              </figure>
+              <p>
+                <li>Páginas web (Landing page, Dinámicas)</li>
+                <li>fronted Angular, django</li>
+                <li>Backend Nodejs, javascript</li>
+              </p>
+            </td>
+            <td>
+              <figure>
+                <img src="images/images2.jpg" alt="Web" width="250" />
+                <figcaption>Bases de Datos</figcaption>
+              </figure>
+              <p>
+                Bases de datos relacionales
+                <li>MySql</li>
+                <li>Oracle</li>
+              </p>
+            </td>
 
-              <td>
-                <figure>
-                  <img src="images/images3.jpg" alt="Web" width="250" />
-                  <figcaption>Sistemas Operativos</figcaption>
-                </figure>
-                <p>
-                  <li>Manejo de windows</li>
-                  <li>Linux (especializado en sistemas unix)</li>
-                  <li>Mac Os</li>
-                </p>
-              </td>
-            </tr>
-          </table>
-        </article>
+            <td>
+              <figure>
+                <img src="images/images3.jpg" alt="Web" width="250" />
+                <figcaption>Sistemas Operativos</figcaption>
+              </figure>
+              <p>
+                <li>Manejo de windows</li>
+                <li>Linux (especializado en sistemas unix)</li>
+                <li>Mac Os</li>
+              </p>
+            </td>
+          </tr>
+        </table>
       </div>
       <div id="portafolio" class="line"></div>
       <div title="Portafolio" class="Portafolio">
         <h2>Portafolio</h2>
         <div class="Portafolio-Images">
           <figure>
-            <img src="images/images4.jpg" alt="Web"/>
+            <img src="images/images4.jpg" alt="Web" />
             <figcaption>Services Web</figcaption>
           </figure>
           <figure>
-            <img src="images/images6.jpg" alt="basesDatos"/>
+            <img src="images/images6.jpg" alt="basesDatos" />
             <figcaption>Data base</figcaption>
           </figure>
           <figure>
-            <img src="images/images8.jpg" alt="Operativos"/>
+            <img src="images/images8.jpg" alt="Operativos" />
             <figcaption>Operating Systems</figcaption>
           </figure>
           <figure>
-            <img src="images/images5.png" alt="Web"/>
+            <img src="images/images5.png" alt="Web" />
             <figcaption>Services Web</figcaption>
           </figure>
           <figure>
-            <img src="images/images7.jpg" alt="basesDatos"/>
+            <img src="images/images7.jpg" alt="basesDatos" />
             <figcaption>Data base</figcaption>
           </figure>
           <figure>
-            <img src="images/images9.jpg" alt="Operativos"/>
+            <img src="images/images9.jpg" alt="Operativos" />
             <figcaption>Operating Systems</figcaption>
           </figure>
         </div>
@@ -175,7 +176,7 @@
         </div>
         <div>
           <label for="Correo">Correo:</label>
-          <input type="email" id="Correo" disabled="disabled"/>
+          <input type="email" id="Correo" disabled="disabled" />
           <span class="error" aria-live="polite"></span>
         </div>
         <div>
@@ -183,8 +184,12 @@
           <textarea id="Mensaje" disabled="disabled"></textarea>
         </div>
         <div class="button">
-          <button type="submit" onclick='alert("Mensaje enviado")' disabled="disabled">
-            <i class='bx bxs-send' >Enviar</i>
+          <button
+            type="submit"
+            onclick='alert("Mensaje enviado")'
+            disabled="disabled"
+          >
+            <i class="bx bxs-send">Enviar</i>
           </button>
         </div>
       </form>
@@ -195,10 +200,25 @@
     <script src="js/validation.js"></script>
 
     <div class="Links">
-      <a title="Ingresa a mi perfil de Facebook" target="_blank" class="bx bxl-facebook-square" href="https://www.facebook.com/charon.xiv0/"></a>
-      <a title="Ingresa a mi perfil de Instagram" target="_blank" class="bx bxl-instagram" href="https://www.instagram.com/charon.xiv0/"></a>
-      <a title="Ingresa a mi perfil de Github" target="_blank" class="bx bxl-github" href="https://github.com/jeirf12"></a>
-      <i title="Mr Robot" class='bx bx-bot'></i>
+      <a
+        title="Ingresa a mi perfil de Facebook"
+        target="_blank"
+        class="bx bxl-facebook-square"
+        href="https://www.facebook.com/charon.xiv0/"
+      ></a>
+      <a
+        title="Ingresa a mi perfil de Instagram"
+        target="_blank"
+        class="bx bxl-instagram"
+        href="https://www.instagram.com/charon.xiv0/"
+      ></a>
+      <a
+        title="Ingresa a mi perfil de Github"
+        target="_blank"
+        class="bx bxl-github"
+        href="https://github.com/jeirf12"
+      ></a>
+      <i title="Mr Robot" class="bx bx-bot"></i>
     </div>
   </body>
 </html>
