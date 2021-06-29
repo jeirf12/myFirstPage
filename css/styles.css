@@ -1,17 +1,20 @@
-:root{
+html {
+  width: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   background: #e1e0d1;
   font: 1em sans-serif;
+  padding: 0 2% 0 2%;
 }
 .switch-header{
   position: relative;
   right: 48%;
 }
 .switch-mode{
-  margin-top: -2rem;
-  margin-left: 1rem;
+  margin-top: -24%;
+  margin-left: 36%;
 }
 .switch {
   position: relative;
@@ -45,9 +48,6 @@ body {
 input:checked + .slider {
   background-color: #4f614f;
 }
-input:focus + .slider::before {
-  background-color: #4f614f;
-}
 input:checked + .slider::before {
   transform: translateX(26px);
 }
@@ -61,9 +61,8 @@ input:checked + .slider::before {
   background-color: rgba(19, 19, 20, 0.965);
   color: rgb(223, 215, 215);
 }
-.banner {
-  height: 300px;
-  width: 1334px;
+.banner{
+  width: 100%;
   background: #2e322e;
   color: #fff;
   animation-duration: 3s;
@@ -72,33 +71,33 @@ input:checked + .slider::before {
 .menu-icon{
   display: none;
 }
-.banner img {
-  display: block;
-  float: left;
-  margin-left: 320%;
-  margin-top: -68%;
-}
-.presentacion {
-  width: 300px;
-  margin: 10px 50px;
-  padding: 70px;
+.presentacion{
+  padding: 1% 5% 1% 5%;
+  display: flex;
+  flex-flow: column wrap-reverse;
+  align-content: flex-end;
 }
 .presentacion h1 {
   margin: 0;
   padding: 0;
   font-size: 25px;
 }
+.presentacion img{
+  float: left;
+  padding-left: 65%;
+  margin-top: -12%;
+}
 .header {
   background: #333;
   color: white;
-  padding: 1rem 0;
+  padding: 1% 0;
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
 }
 .header a {
-  color: #4f614f;
+  color: #c0c0c0;
   text-decoration: none;
 }
 .main {
@@ -144,6 +143,13 @@ input:checked + .slider::before {
 .footer{
   animation-duration: 2s;
   animation-name: slidein;
+  background-image: url("../images/EnConstruccion.svg");
+  background-repeat: no-repeat;
+  background-size: 110% 180%;
+  background-attachment: absolute;
+  background-position: center;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .Links{
   animation-duration: 2s;
@@ -170,12 +176,12 @@ table {
   width: 100%;
 }
 .Servicios img {
-  width: 320px;
-  height: 320px;
-  padding: 5px 50px;
-  margin: 5px 5px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  float: left;
 }
 form {
   margin: 0 auto;
@@ -257,241 +263,63 @@ h2 {
 }
 .Acerca h3{
   text-align: center;
+  padding-bottom: 5%;
 }
-.Servicios h3 {
+.Acerca p{
+  padding-left: 10%;
+  margin: 0;
+}
+.Servicios td{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.Portafolio-Images{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+figure {
+  border: thin #c0c0c0 hidden;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 300px;
+  margin: auto;
+  cursor: pointer;
+}
+.Portafolio img{
+  max-width: 300px;
+  max-height: 300px;
+  padding-top: 5%;
+}
+figcaption{
+  background-color: #333;
+  color: #c0c0c0;
+  font: italic smaller sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 3px;
   text-align: center;
-}
-.Portafolio img {
-  padding: 5px 85px;
-  margin: 10px 10px;
+  margin-top: 3px;
 }
 .line{
   width: 90%;
-  max-width: 1200px;
   margin: 0 auto;
   height: 2px;
-  background: #fff;
-  margin-bottom: 60px;
-}
-@media only screen and (max-width: 770px) {
-  .header{
-    padding: 0.5rem 0;
-    margin: 0;
-  }
-  .switch-mode{
-    margin-top: -1rem;
-    margin-left: 290%;
-  }
-  .banner{
-    width: 100%;
-    height: 300px;
-  }
-  .presentacion{
-    padding: 3px 3px;
-  }
-  .presentacion img{
-    margin-top: -45%;
-    margin-left: 120%;
-  }
-  .container h2{
-    display: none;
-  }
-  .menu-icon{
-    display: block;
-    cursor: pointer;
-    padding: 0.3rem 1rem;
-    color: #4f614f;
-    font-size: 60px;
-  }
-  .navigation {
-    width: 100%;
-    margin-top: 1rem;
-  }
-  .navigation ul {
-    display: none;
-  }
-  .navigation ul.show{
-    display: block;
-  }
-  .navigation ul li {
-    display: block;
-  }
-  .navigation ul li a {
-    display: block;
-    padding: 0.5rem 1rem;
-    transition: all 0.4s linear;
-    border-radius: 5px;
-  }
-  .main {
-    padding-top: 9rem;
-  }
-  .Servicios img {
-    width: 120px;
-    height: 120px;
-  }
-  .Portafolio img {
-    padding: 5px 50px;
-    align-items: center;
-  }
-  .Links a{
-    margin-left: 14%;
-  }
-  .Links i{
-    display: block;
-    margin-left: 46.5%;
-  }
-}
-@media only screen and (max-width: 705px) {
-  .banner{
-    width: 104.5%;
-  }
-}
-@media only screen and (max-width: 677px) {
-  .banner{
-    width: 106.5%;
-  }
-}
-@media only screen and (max-width: 664px) {
-  .banner{
-    width: 110.5%;
-  }
-}
-@media only screen and (max-width: 635px) {
-  .banner{
-    width: 119.5%;
-  }
-}
-@media only screen and (max-width: 585px) {
-  .switch-mode{
-    margin-left: 240%;
-  }
-  .container h2{
-    font-size: 1.3em;
-  }
-  .banner{
-    width: 100%;
-    height: 450px;
-  }
-  .presentacion img{
-    margin-top: 0;
-    margin-left: 35%;
-  }
-  .Servicios td{
-    display: block;
-  }
-  .Servicios img{
-    margin-left: 30%;
-  }
-  .Portafolio img{
-    margin-left: 16%;
-  }
-  .Acerca td{
-    display: block;
-  }
-  form {
-    width: 290px;
-  }
-  input,
-  textarea,
-  select {
-    width: 145px;
-  }
-  .Links a{
-    margin-left: 11%;
-  }
-  .Links i{
-    margin-left: 45%;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .switch-mode{
-    margin-left: 200%;
-  }
-  .banner{
-    width: 100.5%;
-    height: 450px;
-  }
-  .presentacion img{
-    margin-top: 0;
-    margin-left: 14%;
-  }
-  .Servicios td{
-    display: block;
-  }
-  .Servicios img{
-    margin-left: 20%;
-  }
-  .Portafolio img{
-    margin: 0;
-  }
-  .Acerca td{
-    display: block;
-  }
-  form {
-    width: 250px;
-  }
-  input,
-  textarea,
-  select {
-    width: 130px;
-  }
-  .Links a{
-    margin-left: 6.5%;
-  }
-  .Links i{
-    margin-left: 40%;
-  }
-}
-
-@media only screen and (max-width: 380px) {
-  .switch-mode{
-    margin-left: 180%;
-  }
-  .Links a{
-    margin-left: 5%;
-  }
-  .Links i{
-    margin-left: 40%;
-  }
-}
-@media only screen and (max-width: 324px) {
-  .switch-mode{
-    margin-left: 150%;
-  }
-  .banner{
-    width: 115%;
-    height: 450px;
-  }
-  .Links a{
-    margin-left: 2.6%;
-  }
-  .Links i{
-    margin-left: 38%;
-  }
-}
-@media only screen and (max-width: 290px) {
-  .switch-mode{
-    display: none;
-  }
-  .banner{
-    width: 132%;
-    height: 450px;
-  }
-  .Links a{
-    margin-left: -1%;
-  }
-  .Links i{
-    margin-left: 33%;
-  }
+  background: #c0c0c0;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 @keyframes slidein{
   from{
     margin-left: 100%;
-    width: 300%;
+    width: 200%;
   }
   to{
     margin-left: 0%;
     width: 100%;
   }
 }
-
