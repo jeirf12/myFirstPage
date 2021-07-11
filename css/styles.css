@@ -1,7 +1,6 @@
 html {
   width: 100%;
   scroll-behavior: smooth;
-  /* overflow-x: hidden; */
 }
 body {
   background: #e1e0d1;
@@ -99,7 +98,7 @@ input:checked + .slider::before {
   padding: 0 1% 1% 1%;
 }
 .container h2 {
-  letter-spacing: 18px;
+  letter-spacing: 1.3177159590043923vw;
   font-size: 1.7em;
   margin-left: 30%;
 }
@@ -120,16 +119,11 @@ input:checked + .slider::before {
   padding: 0.5rem 0.5rem;
   transition: all 0.4s linear;
   transition: transform 0.5s;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 .navigation a:hover{
-  transform: scale(1.1, 1.1);
+  transform: scale(1.2, 1.2);
   background: #908c38;
-  margin-top: -2;
-  padding-bottom: 14px;
-}
-.Acerca{
-  padding-bottom: 0.1px;
 }
 .footer{
   background-image: url("../images/EnConstruccion.svg");
@@ -139,22 +133,23 @@ input:checked + .slider::before {
   margin-left: 5%;
   margin-right: 5%;
 }
+.Links{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  font-size: 60px;
+}
 .Links a{
   text-decoration: none;
-  font-size: 60px;
   color: #4f614f;
-  margin-top: 2rem;
-  margin-left: 10%;
-  margin-right: 10%;
   transition: transform 0.5s;
 }
 .Links a:hover{
   transform: translateY(-1rem);
 }
 .Links i{
-  font-size: 60px;
   color: #4f614f;
-  margin-left: 10%;
 }
 table {
   width: 100%;
@@ -163,13 +158,15 @@ table {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 300px;
-  height: 300px;
+  width: 45.52352048558422vh;
+  height: 45.52352048558422vh;
+  max-width: 45.52352048558422vh;
+  max-height: 45.52352048558422vh;
   border-radius: 50%;
 }
 form {
   margin: 0 auto;
-  width: 400px;
+  width: 60.69802731411229vh;
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
@@ -187,7 +184,7 @@ textarea,
 select {
   cursor: pointer;
   font: 1em sans-serif;
-  width: 300px;
+  width: 45.52352048558422vh;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 1px solid #4f614f;
@@ -260,23 +257,22 @@ h2 {
 .Portafolio-Images{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   margin-left: 5%;
   margin-right: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 figure {
   border: thin #c0c0c0 hidden;
   display: flex;
   flex-flow: column;
   padding: 5px;
-  max-width: 300px;
+  max-width: 45.52352048558422vh;
   margin: auto;
   cursor: pointer;
 }
 .Portafolio img{
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 45.52352048558422vh;
+  max-height: 45.52352048558422vh;
   padding-top: 5%;
 }
 figcaption{
@@ -299,7 +295,7 @@ figcaption{
 }
 @keyframes slidein{
   from{
-    margin-left: 100%;
+    margin-left: 99%;
     width: 200%;
   }
   to{
