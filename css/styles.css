@@ -151,8 +151,10 @@ input:checked + .slider::before {
 .Links i{
   color: #4f614f;
 }
-table {
-  width: 100%;
+.Servicios{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .Servicios img {
   display: flex;
@@ -242,17 +244,16 @@ input:focus:invalid {
 h2 {
   text-align: center;
 }
+.Acerca{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-left: 5%;
+  padding-right: 3%;
+}
 .Acerca h3{
   text-align: center;
   padding-bottom: 5%;
-}
-.Acerca p{
-  padding-left: 10%;
-  margin: 0;
-}
-.Servicios td{
-  padding-left: 5%;
-  padding-right: 5%;
 }
 .Portafolio-Images{
   display: flex;
