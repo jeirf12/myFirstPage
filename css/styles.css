@@ -294,10 +294,87 @@ figcaption{
   margin-top: 3%;
   margin-bottom: 3%;
 }
+@media only screen and (max-width: 770px), (max-width: 1024px){
+  .switch-header{
+    display: none;
+    padding-left: 65%;
+  }
+  .menu-icon{
+    display: block;
+    cursor: pointer;
+    padding: 0.3rem 1rem;
+    color: #4f614f;
+    font-size: 60px;
+  }
+  .navigation {
+    margin-top: 0.5rem;
+  }
+  .navigation ul {
+    display: none;
+  }
+  .navigation ul.show{
+    display: block;
+  }
+  .navigation ul li {
+    display: block;
+  }
+  .navigation ul li a {
+    display: block;
+    padding: 0.5rem 3rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+  }
+  .main{
+    padding-top: 22vw;
+  }
+  .banner img{
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 50%;
+  }
+  .banner p{
+    padding: 0 0 0 60%;
+  }
+  .logo-nav-container {
+    display: inline;
+  }
+  .container h2 {
+    margin: 0;
+  }
+  .Portafolio-Images{
+    margin-left: 19%;
+    margin-right: 19%;
+  }
+}
+@media only screen and (max-width: 700px), (max-width: 1024px){
+  .main{
+    padding-top: 34vw;
+  }
+  form {
+    width: 290px;
+  }
+  input,
+  textarea,
+  select {
+    width: 145px;
+  }
+}
+@media only screen and (max-width: 524px), (max-width: 1024px){
+  .banner img{
+    margin: 2%;
+    padding-left: 18%;
+    width: 160%;
+  }
+}
+@media only screen and (max-width: 484px), (max-width: 1024px){
+  .main{
+    padding-top: 44vw;
+  }
+}
 @keyframes slidein{
   from{
     margin-left: 99%;
-    width: 200%;
+    width: 300%;
   }
   to{
     margin-left: 0%;
