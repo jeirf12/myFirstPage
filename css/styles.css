@@ -150,6 +150,11 @@ input:checked + .slider::before {
 }
 .Links i{
   color: #4f614f;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.Links i:hover{
+  transform: translateY(-1rem);
 }
 .Servicios{
   display: flex;
