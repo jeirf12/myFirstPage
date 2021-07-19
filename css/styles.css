@@ -350,6 +350,14 @@ figcaption{
     margin-left: 19%;
     margin-right: 19%;
   }
+  .about{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .n-services{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 @media only screen and (max-width: 700px), (max-width: 1024px){
   .main{
