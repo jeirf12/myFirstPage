@@ -356,7 +356,12 @@ input:focus:invalid {
   button,
   textarea,
   select {
-    width: 60%;
+    width: 90%;
     align-content: center;
+  }
+
+  form {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
