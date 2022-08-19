@@ -218,6 +218,7 @@ select {
 input,
 textarea,
 select {
+  outline: none;
   cursor: pointer;
   font: 1em sans-serif;
   width: 45.52352048558422vh;
@@ -250,11 +251,10 @@ input:invalid {
   border-color: #900;
   background-color: #fdd;
 }
-input:focus:invalid {
-  outline: none;
-}
-.error {
-  width: 100%;
+.errorEmail, .errorNombre, .errorMensaje {
+  margin: 0 auto;
+  display: block;
+  width: 45.52352048558422vh;
   padding: 0;
   font-size: 80%;
   color: white;
@@ -262,9 +262,6 @@ input:focus:invalid {
   border-radius: 0 0 5px 5px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-.error.active {
-  padding: 0.3em;
 }
 .Links {
   display: flex;

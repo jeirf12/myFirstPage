@@ -15,7 +15,6 @@
     <!--Fuentes de la pagina-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet"/>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body class="body change-color">
     <header title="Encabezado" class="header">
@@ -148,10 +147,11 @@
     <div class="line"></div>
     <footer id="ir-contacto" title="contacto" class="footer">
       <h2>Contacto</h2>
-      <form method="post">
+      <form>
         <div>
           <label for="Nombre">Nombre:</label>
-          <input type="text" id="Nombre" />
+          <input type="text" id="nombre" />
+          <span class="errorNombre"></span>
         </div>
         <div>
           <label for="motivoServicios">Motivo de servicio:</label>
@@ -165,23 +165,23 @@
         <div>
           <label for="Correo">Correo:</label>
           <input type="email" id="mail" />
-          <span class="error" aria-live="polite"></span>
+          <span class="errorEmail"></span>
         </div>
         <div>
           <label for="Mensaje">Mensaje:</label>
-          <textarea id="Mensaje" ></textarea>
+          <textarea id="mensaje" ></textarea>
+          <span class="errorMensaje"></span>
         </div>
         <div class="button">
-          <button type="submit" onclick='alert("Mensaje enviado")'>
+          <button type="submit">
             <i class="bx bxs-send">Enviar</i>
           </button>
         </div>
       </form>
     </footer>
     <!-- Scripts de ejecución -->
-    <script src="js/menu.js"></script>
-    <script src="js/storage.js"></script>
-    <script src="js/validation.js"></script>
+    <script type="module" src="js/Menu.js"></script>
+    <script type="module" src="js/Validation.js"></script>
     <div class="Links">
       <a title="Ingresa a mi perfil de Facebook" target="_blank" class="bx bxl-facebook-square" href="https://www.facebook.com/ch4r0n.x1v/"></a>
       <a title="Ingresa a mi perfil de Instagram" target="_blank" class="bx bxl-instagram" href="https://www.instagram.com/ch4r0n.x1v/"></a>

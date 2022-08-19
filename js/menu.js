@@ -1,45 +1,39 @@
-jQuery('document').ready(function($){
-  var menuBtn = $('.menu-icon'),
-    menu = $('.navigation ul'),
-    header = $('.header'),
-    iniBtn = $('.inicio'),
-    acercaBtn = $('.acerca'),
-    servicioBtn = $('.servicios'),
-    portafolioBtn = $('.portafolio'),
-    contactoBtn = $('.contacto');
+import {
+  loadClickMainEvent,
+} from './Events.js';
 
-  menuBtn.click(() =>{
-    if(menu.hasClass('show')){
-      header.removeClass('showheader')
-      menu.removeClass('show');
-    }else{
-      header.addClass('showheader')
-      menu.addClass('show');
-    }
-  });
+let menuBtn = document.querySelector(".menu-icon");
+let menu = document.querySelector(".navigation ul");
+let header = document.querySelector(".header");
+let iniBtn = document.querySelector(".inicio");
+let aboutBtn = document.querySelector(".acerca");
+let serviceBtn = document.querySelector(".servicios");
+let portfolioBtn = document.querySelector(".portafolio");
+let contactBtn = document.querySelector(".contacto");
 
-  iniBtn.click(() =>{
-    header.removeClass('showheader')
-    menu.removeClass('show');
-  });
+const removeClass = () => {
+  header.classList.remove('showheader');
+  menu.classList.remove('show');
+}
 
-  acercaBtn.click(() =>{
-    header.removeClass('showheader')
-    menu.removeClass('show')
-  });
+const mainMenu = () => {
+  if(menu.classList.contains("show")) {
+    removeClass();
+  } else {
+    header.classList.add("showheader");
+    menu.classList.add("show");
+  }
+}
 
-  servicioBtn.click(() =>{
-    header.removeClass('showheader')
-    menu.removeClass('show')
-  });
-  
-  portafolioBtn.click(() =>{
-    header.removeClass('showheader')
-    menu.removeClass('show')
-  });
-  
-  contactoBtn.click(() =>{
-    header.removeClass('showheader')
-    menu.removeClass('show')
-  });
-});
+let props = {
+  iniBtn: iniBtn,
+  aboutBtn: aboutBtn,
+  serviceBtn: serviceBtn,
+  portfolioBtn: portfolioBtn,
+  contactBtn: contactBtn,
+  menuBtn: menuBtn,
+  mainMenu: mainMenu,
+  removeClass: removeClass
+}
+
+loadClickMainEvent(props);
