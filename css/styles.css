@@ -27,6 +27,7 @@ body {
 .header a {
   color: #c0c0c0;
   text-decoration: none;
+  cursor: pointer;
 }
 .header small {
   letter-spacing: 1.3177159590043923vw;
@@ -155,6 +156,7 @@ figure {
   max-width: 45.52352048558422vh;
   margin: auto;
   cursor: pointer;
+  padding-top: 2%;
 }
 figcaption {
   background-color: #333;
@@ -165,6 +167,7 @@ figcaption {
   padding: 3px;
   text-align: center;
   margin-top: 3px;
+  border-radius: 3px;
 }
 .Servicios {
   display: flex;
@@ -185,14 +188,17 @@ figcaption {
 .Portafolio-Images {
   display: flex;
   flex-wrap: wrap;
+  flex: 1 1 auto;
   justify-content: space-around;
   padding-left: 8%;
   padding-right: 8%;
 }
 .Portafolio img {
+  width: 500px;
   max-width: 45.52352048558422vh;
+  height: 12rem;
   max-height: 45.52352048558422vh;
-  padding-top: 5%;
+  border-radius: 10px;
 }
 .footer {
   margin-left: 5%;
@@ -209,8 +215,11 @@ form {
 form div + div {
   margin-top: 1em;
 }
-label {
+#form label {
   display: block;
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
 }
 select {
   text-align: center;
@@ -224,11 +233,16 @@ select {
   width: 45.52352048558422vh;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 1px solid #4f614f;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
 }
 input:focus,
 textarea:focus {
-  border-color: #000;
+  border-color: #0075FF;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 }
 textarea {
   vertical-align: top;
@@ -236,8 +250,19 @@ textarea {
   resize: vertical;
 }
 button {
+  width: 50%;
+  height: 45px;
   cursor: pointer;
   font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  line-height: 45px;
+}
+button:hover {
+  box-shadow: 4px 0px 30px rgba(163, 163, 163, 1);
 }
 input[type="email"] {
   -webkit-appearance: none;
@@ -251,17 +276,74 @@ input:invalid {
   border-color: #900;
   background-color: #fdd;
 }
+.group-input {
+  position: relative;
+}
+.form-group-correcto .validation-status {
+  color: #1ed12d;
+  opacity: 1;
+}
+.form-group-incorrecto .validation-status {
+  color: #bb2929;
+  opacity: 1;
+}
+.form-group-incorrecto label {
+  color: #bb2929;
+}
+.form-group-incorrecto .group-input input, .form-group-incorrecto .group-input textarea, .form-group-incorrecto .group-input select {
+  border: 3px solid #bb2929;
+}
+.group-message {
+  height: 45px;
+  line-height: 45px;
+  background: #F66860;
+  padding: 0 15px;
+  border-radius: 3px;
+  display: none;
+}
+.group-message p {
+  margin: 0;
+  width: 45.52352048558422vh;
+}
+.group-message-activo {
+  display: block;
+}
+.message-success {
+  font-size: 14px;
+  color: #119200;
+  display: none;
+}
+.message-success-activo {
+  display: block;
+}
+.input-error {
+  font-size: 14px;
+  margin-bottom: 0;
+  display: none;
+}
+.input-error-activo {
+  display: block;
+}
+.validation-status {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+}
 .errorEmail, .errorNombre, .errorMensaje {
-  margin: 0 auto;
+  margin: 10px auto;
   display: block;
   width: 45.52352048558422vh;
   padding: 0;
   font-size: 80%;
   color: white;
   background-color: #900;
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  line-height: 25px;
 }
 .Links {
   display: flex;
@@ -274,6 +356,7 @@ input:invalid {
   text-decoration: none;
   color: #4f614f;
   transition: transform 0.5s;
+  cursor: pointer;
 }
 .Links a:hover {
   transform: translateY(-1rem);

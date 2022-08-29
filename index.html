@@ -25,15 +25,15 @@
             <span class="slider round"></span>
           </label>
         </div>
-        <small><a href="#">Jhonfer</a></small>
+        <small><a class="inicio">Jhonfer</a></small>
         <span class="menu-icon"><i class="bx bx-menu"></i></span>
         <nav class="navigation">
           <ul>
-            <li><a href="#" title="Inicio" class="inicio">Inicio</a></li>
-            <li><a href="#ir-acerca" title="Acerca de mi" class="acerca">Acerca de mi</a></li>
-            <li><a href="#ir-servicios" title="Servicios" class="servicios">Servicios</a></li>
-            <li><a href="#ir-portafolio" title="Portafolio" class="portafolio">Portafolio</a></li>
-            <li><a href="#ir-contacto" title="Contacto" class="contacto">Contacto</a></li>
+            <li><a title="Inicio" class="inicio">Inicio</a></li>
+            <li><a title="Acerca de mi" class="acerca">Acerca de mi</a></li>
+            <li><a title="Servicios" class="servicios">Servicios</a></li>
+            <li><a title="Portafolio" class="portafolio">Portafolio</a></li>
+            <li><a title="Contacto" class="contacto">Contacto</a></li>
           </ul>
         </nav>
     </header>
@@ -147,45 +147,67 @@
     <div class="line"></div>
     <footer id="ir-contacto" title="contacto" class="footer">
       <h2>Contacto</h2>
-      <form>
-        <div>
-          <label for="Nombre">Nombre:</label>
-          <input type="text" id="nombre" />
+      <form id="form">
+        <div class="form-group" id="group-nombre">
+          <label for="nombre">Nombre:</label>
+          <div class="group-input">
+            <input type="text" id="nombre" name="nombre"/>
+            <i class='validation-status bx'></i>
+          </div>
+          <p class="input-error">Digite un nombre sin numeros, guiones bajo y caracteres raros</p>
           <span class="errorNombre"></span>
         </div>
-        <div>
+        <div class="form-group" id="group-servicio">
           <label for="motivoServicios">Motivo de servicio:</label>
-          <select id="motivoServicios" >
-            <option>Elige una opción</option>
-            <option>Servicio Web</option>
-            <option>Bases de Datos</option>
-            <option>Sistemas Operativos</option>
-          </select>
+          <div class="group-input">
+            <select id="motivoServicios" name="servicio">
+              <option value="">Elige una opción</option>
+              <option value="serviceWeb">Servicio Web</option>
+              <option value="database">Bases de Datos</option>
+              <option value="systemOperating">Sistemas Operativos</option>
+            </select>
+            <i class='validation-status bx'></i>
+          </div>
+          <p class="input-error">Elija el servicio deseado</p>
         </div>
-        <div>
-          <label for="Correo">Correo:</label>
-          <input type="email" id="mail" />
+        <div class="form-group" id="group-email">
+          <label for="mail">Correo:</label>
+          <div class="group-input">
+            <input type="email" id="email" name="email"/>
+            <i class='validation-status bx'></i>
+          </div>
+          <p class="input-error">Digite un correo sin caracteres raros</p>
           <span class="errorEmail"></span>
         </div>
-        <div>
-          <label for="Mensaje">Mensaje:</label>
-          <textarea id="mensaje" ></textarea>
+        <div class="form-group" id="group-mensaje">
+          <label for="mensaje">Mensaje:</label>
+          <div class="group-input">
+            <textarea id="mensaje" name="mensaje"></textarea>
+            <i class='validation-status bx'></i>
+          </div>
+          <p class="input-error">Digite un mensaje con mas de 20 palabras</p>
           <span class="errorMensaje"></span>
         </div>
+        <div class="group-message">
+          <p><i class='bx bxs-error-circle'></i><b>Error: </b>Por favor rellena el formulario correctamente</p>
+        </div>
         <div class="button">
-          <button type="submit">
-            <i class="bx bxs-send">Enviar</i>
+          <button id="btn-form" type="submit">
+            <i class="bx bxs-send" id="button">Enviar</i>
           </button>
+          <p class="message-success">Formulario enviado correctamente!</p>
         </div>
       </form>
     </footer>
     <!-- Scripts de ejecución -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="module" src="js/Menu.js"></script>
     <script type="module" src="js/Validation.js"></script>
+    <script type="module" src="js/LoadPage.js"></script>
     <div class="Links">
-      <a title="Ingresa a mi perfil de Facebook" target="_blank" class="bx bxl-facebook-square" href="https://www.facebook.com/ch4r0n.x1v/"></a>
-      <a title="Ingresa a mi perfil de Instagram" target="_blank" class="bx bxl-instagram" href="https://www.instagram.com/ch4r0n.x1v/"></a>
-      <a title="Ingresa a mi perfil de Github" target="_blank" class="bx bxl-github" href="https://github.com/jeirf12"></a>
+      <a id="icon-facebook" title="Ingresa a mi perfil de Facebook" class="bx bxl-facebook-square"></a>
+      <a id="icon-instagram" title="Ingresa a mi perfil de Instagram" class="bx bxl-instagram"></a>
+      <a id="icon-github" title="Ingresa a mi perfil de Github" class="bx bxl-github"></a>
       <i title="Mr Robot" class="bx bx-bot"></i>
     </div>
   </body>
