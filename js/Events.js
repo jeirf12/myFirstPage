@@ -38,10 +38,9 @@ const loadClickMainEvent = (props) => {
 }
 
 const regularExpressions = {
-  name: /^\w+\s\w+$/, // Letras y espacios, pueden llevar acentos.
-  message: /^[a-zA-ZÀ-ÿ_.+-\s]{20,140}$/, // Letras y espacios, pueden llevar acentos minimo 20 palabras.
-  servicio: /^\S+[a-zA-ZÀ-ÿ\s]{20,140}$/, // Letras y espacios, pueden llevar acentos minimo 20 palabras.
-  password: /^.{4,12}$/, // 4 a 12 digitos.
+  name: /^[a-zA-ZÀ-ÿ]+\s[a-zA-ZÀ-ÿ]+$/, // Letras y espacios, pueden llevar acentos.
+  message: /^[a-zA-ZÀ-ÿ ]{20,140}$/, // Letras y espacios, pueden llevar acentos minimo 20 palabras.
+  servicio: /^[a-zA-ZÀ-ÿ]{10,140}$/, // Letras y espacios, pueden llevar acentos minimo 20 palabras.
   email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 }
 
