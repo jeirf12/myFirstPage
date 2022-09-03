@@ -92,7 +92,7 @@ const formValid = (btn, e) => {
     const serviceID = "default_service";
     const templateID = "template_fhk2408";
 
-    emailjs.sendForm(serviceID, templateID, this).then(
+    emailjs.sendForm(serviceID, templateID, e.target).then(
       () => {
         btn.textContent = "Enviar";
         alert("Mensaje enviado correctamente");
