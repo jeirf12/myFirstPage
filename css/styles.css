@@ -93,7 +93,9 @@ input:checked + .slider::before {
   border-radius: 15px;
 }
 .navigation a:hover {
-  transform: scale(1.2, 1.2);
+  background: #908c38;
+}
+.active {
   background: #908c38;
 }
 .banner {
@@ -113,6 +115,7 @@ input:checked + .slider::before {
   font-weight: bold;
   padding: 2%;
   margin: 0;
+  line-height: 65px;
 }
 .Acerca {
   display: flex;
@@ -124,17 +127,24 @@ input:checked + .slider::before {
   text-align: center;
   padding-bottom: 5%;
 }
-.Acerca p {
-  white-space: pre-line;
-}
 .content-acerca {
-  padding: 8% 0 19% 0;
+  padding: 3% 0 1% 0;
+}
+.about {
+  width: 250px;
+  min-width: 250px;
+  padding: 5% 2%;
+  text-align: justify;
+  line-height: 35px;
 }
 .content-portafolio {
   padding: 4% 0 4% 0;
 }
 .content-servicios {
-  padding: 4% 0 6% 0;
+  padding: 3% 0 3% 0;
+}
+.n-services {
+  line-height: 35px;
 }
 h2 {
   text-align: center;
