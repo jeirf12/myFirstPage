@@ -5,7 +5,7 @@ import {
 let menuBtn = document.querySelector(".menu-icon");
 let menu = document.querySelector(".navigation ul");
 let header = document.querySelector(".header");
-let iniBtn = document.querySelector(".inicio");
+let iniBtn = document.querySelectorAll(".inicio");
 let aboutBtn = document.querySelector(".acerca");
 let serviceBtn = document.querySelector(".servicios");
 let portfolioBtn = document.querySelector(".portafolio");

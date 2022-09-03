@@ -30,7 +30,8 @@ const loadClickMainEvent = (props) => {
   props.menuBtn.addEventListener("click", () => {
     props.mainMenu();
   });
-  loadClickEvent(props.iniBtn, props.removeClass);
+  loadClickEvent(props.iniBtn[0], props.removeClass);
+  loadClickEvent(props.iniBtn[1], props.removeClass);
   loadClickEvent(props.aboutBtn, props.removeClass);
   loadClickEvent(props.serviceBtn, props.removeClass);
   loadClickEvent(props.portfolioBtn, props.removeClass);
