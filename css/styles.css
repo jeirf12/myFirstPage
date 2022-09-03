@@ -286,9 +286,6 @@ input:invalid {
   border-color: #900;
   background-color: #fdd;
 }
-.group-input {
-  position: relative;
-}
 .form-group-correcto .validation-status {
   color: #1ed12d;
   opacity: 1;
@@ -335,9 +332,6 @@ input:invalid {
   display: block;
 }
 .validation-status {
-  position: absolute;
-  right: 10px;
-  bottom: 15px;
   z-index: 100;
   font-size: 16px;
   opacity: 0;
