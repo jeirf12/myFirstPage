@@ -41,7 +41,7 @@ const loadClickMainEvent = (props) => {
 const regularExpressions = {
   name: /^[a-zA-ZÀ-ÿ]+\s[a-zA-ZÀ-ÿ]+$/, // Letras y espacios, pueden llevar acentos.
   message: /^[a-zA-ZÀ-ÿ ]{20,140}$/, // Letras y espacios, pueden llevar acentos minimo 20 palabras.
-  servicio: /^[a-zA-ZÀ-ÿ]{10,140}$/, // Letras y espacios, pueden llevar acentos minimo 20 palabras.
+  servicio: /^[a-zA-ZÀ-ÿ]{8,140}$/, // Letras y espacios, pueden llevar acentos minimo 20 palabras.
   email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 }
 
