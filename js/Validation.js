@@ -32,7 +32,8 @@ const getError = (nameInput) => {
     nameInput !== "Email"
       ? element.value !== ""
       : element.validity.valid && element.value !== "" && regularExpressions.email.test(element.value);
-  if (validation) result++;
+  let valid = validateForm(element);
+  if (validation && valid) result++;
   return result;
 };
 
@@ -46,22 +47,26 @@ const validateField = (expression, input, field) => {
     elementI.classList.remove("bxs-x-circle");
     elementI.classList.add("bxs-check-circle");
     elementMessage.classList.remove("input-error-activo");
+    return true;
   }else{
     element.classList.add("form-group-incorrecto");
     element.classList.remove("form-group-correcto");
     elementI.classList.add("bxs-x-circle");
     elementI.classList.remove("bxs-check-circle");
     elementMessage.classList.add("input-error-activo");
+    return false;
   }
 };
 
 const validateForm = (e) => {
+  let resultado = false;
   switch(e.name) {
-    case "nombre": validateField(regularExpressions.name, e, e.name); break;
-    case "servicio": validateField(regularExpressions.servicio, e, e.name); break;
-    case "email": validateField(regularExpressions.email, e, e.name); break;
-    case "mensaje": validateField(regularExpressions.message, e, e.name); break;
+    case "nombre": resultado = validateField(regularExpressions.name, e, e.name); break;
+    case "servicio": resultado = validateField(regularExpressions.servicio, e, e.name); break;
+    case "email": resultado = validateField(regularExpressions.email, e, e.name); break;
+    case "mensaje": resultado = validateField(regularExpressions.message, e, e.name); break;
   }
+  return resultado;
 }
 
 const isEmptyFields = () => {
