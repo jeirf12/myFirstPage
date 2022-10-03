@@ -117,6 +117,9 @@ input:checked + .slider::before {
   margin: 0;
   line-height: 65px;
 }
+.banner > img {
+  border-radius: 5px;
+}
 .Acerca {
   display: flex;
   justify-content: space-around;
