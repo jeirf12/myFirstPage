@@ -1,5 +1,7 @@
 import {
   loadClickMainEvent,
+  headerSwitch,
+  loadResizeEvent,
 } from './Events.js';
 
 let menuBtn = document.querySelector(".menu-icon");
@@ -25,6 +27,21 @@ const mainMenu = () => {
   }
 }
 
+let swHeader = headerSwitch();
+
+const resizeMode = () => {
+  if (window.screen.width < 1025) {
+    header.contains(swHeader) ?? header.removeChild(swHeader);
+    menu.appendChild(swHeader);
+  } else {
+    menu.contains(swHeader) ?? menu.removeChild(swHeader);
+    header.insertAdjacentElement("afterbegin", swHeader);
+  } 
+}
+
+resizeMode();
+let toggle = document.querySelector(".toggle");
+
 let props = {
   iniBtn: iniBtn,
   aboutBtn: aboutBtn,
@@ -32,8 +49,10 @@ let props = {
   portfolioBtn: portfolioBtn,
   contactBtn: contactBtn,
   menuBtn: menuBtn,
+  toggle: toggle,
   mainMenu: mainMenu,
   removeClass: removeClass
 }
-
+ 
+loadResizeEvent(window, resizeMode);
 loadClickMainEvent(props);

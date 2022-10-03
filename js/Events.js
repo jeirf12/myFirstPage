@@ -36,6 +36,7 @@ const loadClickMainEvent = (props) => {
   loadClickEvent(props.serviceBtn, props.removeClass);
   loadClickEvent(props.portfolioBtn, props.removeClass);
   loadClickEvent(props.contactBtn, props.removeClass);
+  loadClickEvent(props.toggle, props.removeClass);
 }
 
 const regularExpressions = {
@@ -45,4 +46,29 @@ const regularExpressions = {
   email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 }
 
-export { loadKeyupEvent, loadBlurEvent, loadClickEvent, loadSubmitEvent, loadClickMainEvent, regularExpressions };
+const headerSwitch = () => {
+  let div = document.createElement("div")
+  div.setAttribute("class", "switch-header");
+  let h3 = document.createElement("h3")
+  h3.textContent = "Modo Oscuro";
+  let label = document.createElement("label")
+  label.setAttribute("class", "switch");
+  let input = document.createElement("input")
+  input.setAttribute("class", "toggle")
+  input.setAttribute("type", "checkbox");
+  let span = document.createElement("span")
+  span.setAttribute("class", "slider round");
+  label.appendChild(input);
+  label.appendChild(span);
+  div.appendChild(h3);
+  div.appendChild(label);
+  return div;
+}
+
+const loadResizeEvent = (element, methodResize, parameter="") => {
+  element.addEventListener("resize", () => {
+    if(parameter !== "") methodResize(parameter);
+    else methodResize();
+  })
+}
+export { loadKeyupEvent, loadBlurEvent, loadClickEvent, loadSubmitEvent, loadClickMainEvent, regularExpressions, headerSwitch, loadResizeEvent };

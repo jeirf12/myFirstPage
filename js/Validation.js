@@ -11,7 +11,6 @@ let body = document.querySelector(".body");
 let storage = window.localStorage;
 
 let isBlack = Boolean(storage.getItem("oscuro"));
-
 const validBlack = (isBlack) => {
   isBlack
     ? body.classList.add("change-color")

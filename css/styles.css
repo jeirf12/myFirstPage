@@ -391,9 +391,6 @@ input:invalid {
     padding: 0 40% 0 40%;
     flex-wrap: wrap;
   }
-  .switch-header {
-    display: none;
-  }
   .menu-icon {
     display: inline;
     cursor: pointer;
