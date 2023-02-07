@@ -190,8 +190,13 @@
         </div>
       </form>
     </footer>
+    <br>
     <!-- Scripts de ejecución -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      function visits(response) { document.getElementById('visits').innerText = `${response.value} Visitas`; }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/jeirf12.github.com/visits?callback=visits"></script>
     <script type="module" src="js/Menu.js"></script>
     <script type="module" src="js/Validation.js"></script>
     <script type="module" src="js/LoadPage.js"></script>
@@ -201,5 +206,6 @@
       <a id="icon-github" title="Ingresa a mi perfil de Github" class="bx bxl-github"></a>
       <i title="Mr Robot" class="bx bx-bot"></i>
     </div>
+    <div id="visits">...</div>
   </body>
 </html>

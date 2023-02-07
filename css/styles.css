@@ -381,6 +381,16 @@ input:invalid {
   background: #000000;
   border-radius: 50%;
 }
+#visits {
+  display: grid;
+  place-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  background: #333333;
+  color: #c0c0c0;
+  padding: 10px 0;
+  text-align: center;
+}
 @keyframes slidein {
   from {
     margin-left: 99%;
