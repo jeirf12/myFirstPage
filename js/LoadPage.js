@@ -1,5 +1,5 @@
 import {
-  loadClickEvent
+  loadClickEvent, loadMouseEnterEvent, loadMouseLeaveEvent
 } from './Events.js';
 
 let name = "icon-";
@@ -29,6 +29,15 @@ const addClass = (inputNew) => {
   }
   if (inputNew !== undefined) inputNew.classList.add("active");
 }
+
+const toggleClass = ({element, id}) => { element.classList.toggle(id) };
+
+loadMouseEnterEvent(facebook, toggleClass, {element: facebook, id:"facebook"});
+loadMouseLeaveEvent(facebook, toggleClass, {element: facebook, id:"facebook"});
+loadMouseEnterEvent(instagram, toggleClass, {element: instagram, id:"instagram"});
+loadMouseLeaveEvent(instagram, toggleClass, {element: instagram, id:"instagram"});
+loadMouseEnterEvent(github, toggleClass, {element: github, id:"github"});
+loadMouseLeaveEvent(github, toggleClass, {element: github, id:"github"});
 
 loadClickEvent(facebook, openWindowNew, "https://www.facebook.com/Fallen.100101");
 loadClickEvent(instagram, openWindowNew, "https://www.instagram.com/fallen.1001");

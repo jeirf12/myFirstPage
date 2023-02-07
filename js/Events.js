@@ -1,3 +1,9 @@
+const loadMouseEnterEvent = (element, methodMouseEnter, parameter = "") => {
+  element.addEventListener("mouseenter", parameter !== "" ? () => { methodMouseEnter(parameter) } : methodMouseEnter);
+};
+const loadMouseLeaveEvent = (element, methodMouseLeave, parameter = "") => {
+  element.addEventListener("mouseleave", parameter !== "" ? () => { methodMouseLeave(parameter) } : methodMouseLeave);
+};
 const loadKeyupEvent = (element, methodInput, parameter="") => {
   return element.addEventListener("keyup", () => {
     if(parameter !== "") return methodInput(parameter);
@@ -71,4 +77,4 @@ const loadResizeEvent = (element, methodResize, parameter="") => {
     else methodResize();
   })
 }
-export { loadKeyupEvent, loadBlurEvent, loadClickEvent, loadSubmitEvent, loadClickMainEvent, regularExpressions, headerSwitch, loadResizeEvent };
+export { loadMouseEnterEvent, loadMouseLeaveEvent, loadKeyupEvent, loadBlurEvent, loadClickEvent, loadSubmitEvent, loadClickMainEvent, regularExpressions, headerSwitch, loadResizeEvent };

@@ -359,22 +359,27 @@ input:invalid {
   padding-top: 2rem;
   font-size: 60px;
 }
-.Links a {
+.Links a, .Links i {
   text-decoration: none;
   color: #4f614f;
   transition: transform 0.5s;
   cursor: pointer;
 }
-.Links a:hover {
+.Links a:hover, .Links i:hover {
   transform: translateY(-1rem);
 }
-.Links i {
-  color: #4f614f;
-  cursor: pointer;
-  transition: transform 0.5s;
+.facebook {
+  color: #0A82ED !important;
 }
-.Links i:hover {
-  transform: translateY(-1rem);
+.instagram {
+  color: #ffffff !important;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-radius: 20px;
+}
+.github {
+  color: #ffffff !important;
+  background: #000000;
+  border-radius: 50%;
 }
 @keyframes slidein {
   from {
