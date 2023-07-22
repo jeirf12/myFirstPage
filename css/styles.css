@@ -1,5 +1,7 @@
 * {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 body {
   background: #e1e0d1;
@@ -12,24 +14,28 @@ body {
   color: rgb(223, 215, 215);
 }
 .header {
-  background: #333;
   color: white;
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
-  padding-bottom: 1%;
+  padding: 1%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
+  backdrop-filter: blur(14px);
+  background-color: rgba(51, 51, 51, 0.8);
 }
-.header a {
+.navigation {
+  text-align: center;
+}
+.navigation > ul > li > a, .header > small > a {
   color: #c0c0c0;
   text-decoration: none;
   cursor: pointer;
 }
-.header small {
+.header > small {
   letter-spacing: 1.3177159590043923vw;
   font-size: 1.7em;
   font-weight: bold;
@@ -40,6 +46,9 @@ body {
 .switch-header {
   display: inline-block;
   text-align: center;
+}
+.switch-header > h3, .switch-header > .switch {
+  margin-top: 5px;
 }
 .switch {
   position: relative;
@@ -82,10 +91,10 @@ input:checked + .slider::before {
 .slider.round::before {
   border-radius: 50%;
 }
-.navigation ul li {
+.navigation > ul > li {
   display: inline-block;
 }
-.navigation ul li a {
+.navigation > ul > li > a {
   display: block;
   padding: 0.5rem 0.5rem;
   transition: all 0.4s linear;
@@ -105,10 +114,10 @@ input:checked + .slider::before {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  padding: 4%;
-  padding-top: 10%;
+  padding: 8%;
+  border-radius: 12px;
 }
-.banner p {
+.banner > p {
   display: inline-block;
   white-space: pre-line;
   font-size: 28px;
@@ -122,38 +131,48 @@ input:checked + .slider::before {
 }
 .Acerca {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  padding: 0% 5% 0% 5%;
+  justify-content: center;
+  padding: 0 5%;
 }
 .Acerca h3 {
   text-align: center;
   padding-bottom: 5%;
+  font-size: 2rem;
 }
-.content-acerca {
-  padding: 3% 0 1% 0;
+.content-acerca, .content-servicios, .content-portafolio, .footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
 }
 .about {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
   width: 250px;
   min-width: 250px;
-  padding: 5% 2%;
+  padding: 5%;
   text-align: justify;
-  line-height: 35px;
+  line-height: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(131, 134, 135, 0);
 }
-.content-portafolio {
-  padding: 4% 0 4% 0;
-}
-.content-servicios {
-  padding: 3% 0 3% 0;
+.about:hover, .n-services:hover {
+  background: rgba(180, 185, 188, 0.5);
+  border: 1px solid rgba(131, 134, 135, 0.5);
+  cursor: pointer;
 }
 .n-services {
-  line-height: 35px;
+  padding: 2.8%;
+  border-radius: 12px;
+  border: 1px solid rgba(131, 134, 135, 0);
 }
 h2 {
   text-align: center;
-  padding: 6%;
-  padding-bottom: 2%;
-  margin: 0;
+  padding: 2% 0;
+  font-size: 3rem;
 }
 .line {
   width: 90%;
@@ -161,7 +180,16 @@ h2 {
   background: #c0c0c0;
   margin: 0 auto;
 }
-figure {
+.n-services > figure {
+  display: flex;
+  flex-flow: column;
+  cursor: pointer;
+  gap: 20px;
+}
+.n-services-body {
+  line-height: 25px;
+}
+.Portafolio-Images > figure {
   border: thin #c0c0c0 hidden;
   display: flex;
   flex-flow: column;
@@ -171,7 +199,7 @@ figure {
   cursor: pointer;
   padding-top: 2%;
 }
-figcaption {
+.n-services > figure > figcaption, .Portafolio-Images > figure > figcaption {
   background-color: #333;
   color: #c0c0c0;
   font: italic smaller sans-serif;
@@ -184,38 +212,23 @@ figcaption {
 }
 .Servicios {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  padding: 0% 3% 0% 3%;
+  justify-content: center;
 }
-.Servicios img {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 45.52352048558422vh;
-  height: 45.52352048558422vh;
-  max-width: 45.52352048558422vh;
-  max-height: 45.52352048558422vh;
+.n-services > figure > img {
+  width: 18rem;
+  height: 18rem;
   border-radius: 50%;
 }
 .Portafolio-Images {
   display: flex;
   flex-wrap: wrap;
-  flex: 1 1 auto;
-  justify-content: space-around;
-  padding-left: 8%;
-  padding-right: 8%;
+  gap: 5%;
+  padding: 0 5%;
 }
-.Portafolio img {
-  width: 500px;
-  max-width: 45.52352048558422vh;
+.Portafolio-Images > figure > img {
   height: 12rem;
-  max-height: 45.52352048558422vh;
-  border-radius: 10px;
-}
-.footer {
-  margin-left: 5%;
-  margin-right: 5%;
+  border-radius: 12px;
 }
 form {
   margin: 0 auto;
@@ -249,8 +262,8 @@ select {
   border: 3px solid transparent;
   border-radius: 10px;
   height: 45px;
-  line-height: 45px;
-  padding: 0 40px 0 10px;
+  line-height: 18px;
+  padding: 10px;
 }
 input:focus,
 textarea:focus {
@@ -389,6 +402,9 @@ input:invalid {
   }
 }
 @media only screen and (max-width: 770px), (max-width: 1024px) {
+  .content-acerca, .content-servicios, .content-portafolio, .footer {
+    height: unset;
+  }
   .header {
     padding-left: 30%;
   }
@@ -423,8 +439,9 @@ input:invalid {
     padding-top: 0;
   }
   .about {
-    padding-left: 5%;
-    padding-right: 5%;
+    /* flex-direction: column; */
+    /* padding-left: 5%; */
+    /* padding-right: 5%; */
   }
   .Servicios {
     padding: 15%;
