@@ -155,16 +155,18 @@ input:checked + .slider::before {
   line-height: 25px;
   border-radius: 12px;
   border: 1px solid rgba(131, 134, 135, 0);
-}
-.about:hover, .n-services:hover {
-  background: rgba(180, 185, 188, 0.5);
-  border: 1px solid rgba(131, 134, 135, 0.5);
-  cursor: pointer;
+  transition: background 0.2s ease-in-out;
 }
 .n-services {
   padding: 2.8%;
   border-radius: 12px;
   border: 1px solid rgba(131, 134, 135, 0);
+  transition: background 0.2s ease-in-out;
+}
+.about:hover, .n-services:hover {
+  background: rgba(180, 185, 188, 0.5);
+  border: 1px solid rgba(131, 134, 135, 0.5);
+  cursor: pointer;
 }
 h2 {
   text-align: center;
