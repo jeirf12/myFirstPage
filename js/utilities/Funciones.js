@@ -17,15 +17,6 @@ let openWindowNew = (url) => { window.open(url); };
 // Permite cambiar entre dos estados agregar/remover una clase de un elemento del dom a partir de un id
 let toggleClass = ({element, id}) => { element.classList.toggle(id); };
 
-// Permite a los inputs remover su clase activa y definir como activa al que se pasa por parametros
-let addClass = (inputNew) => {
-  let inputsActive = document.getElementsByTagName("a");
-  for (let input of inputsActive) {
-    if(input.classList.contains("active")) input.classList.remove("active");
-  }
-  if (inputNew !== undefined) inputNew.classList.add("active");
-};
-
 // La funcion permite remover/agregar una clase a los elementos del header y el menu especificamente
 let toggleClassMenu = () => {
   header.classList.toggle('showheader');
@@ -154,7 +145,6 @@ export {
   openLink,
   openWindowNew,
   toggleClass,
-  addClass,
   toggleClassMenu,
   resizeMode,
   validBlack,

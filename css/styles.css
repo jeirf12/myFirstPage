@@ -104,9 +104,6 @@ input:checked + .slider::before {
 .navigation a:hover {
   background: #908c38;
 }
-.active {
-  background: #908c38;
-}
 .banner {
   background: #2e322e;
   color: #fff;
@@ -341,11 +338,13 @@ input:invalid {
 }
 .input-error {
   font-size: 14px;
+  font-weight: bold;
   margin-bottom: 0;
   display: none;
 }
 .input-error-activo {
   display: block;
+  color: #bb2929;
 }
 .validation-status {
   z-index: 100;
@@ -409,8 +408,9 @@ input:invalid {
     padding-left: 30%;
   }
   .showheader {
-    padding: 0 40% 0 40%;
+    padding: 1% 40%;
     flex-wrap: wrap;
+    flex-direction: column;
   }
   .menu-icon {
     display: inline;
@@ -422,7 +422,8 @@ input:invalid {
     display: none;
   }
   .navigation ul.show {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
   }
   .navigation ul li a {
     display: inline-block;
@@ -437,11 +438,6 @@ input:invalid {
   }
   .banner p {
     padding-top: 0;
-  }
-  .about {
-    /* flex-direction: column; */
-    /* padding-left: 5%; */
-    /* padding-right: 5%; */
   }
   .Servicios {
     padding: 15%;
