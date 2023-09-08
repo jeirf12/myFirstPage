@@ -144,6 +144,20 @@ input:checked + .slider::before {
   height: 100vh;
   justify-content: center;
 }
+.content-acerca {
+  padding-top: 3%;
+}
+.content-servicios {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.content-portafolio {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.footer {
+  padding-top: 3%;
+}
 .about {
   display: flex;
   flex-direction: column;
@@ -382,16 +396,6 @@ input:invalid {
   background: #000000;
   border-radius: 50%;
 }
-#visits {
-  display: grid;
-  place-content: center;
-  font-weight: bold;
-  font-size: 20px;
-  background: #333333;
-  color: #c0c0c0;
-  padding: 10px 0;
-  text-align: center;
-}
 @keyframes slidein {
   from {
     margin-left: 99%;
@@ -405,6 +409,8 @@ input:invalid {
 @media only screen and (max-width: 770px), (max-width: 1024px) {
   .content-acerca, .content-servicios, .content-portafolio, .footer {
     height: unset;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .header {
     padding-left: 30%;
