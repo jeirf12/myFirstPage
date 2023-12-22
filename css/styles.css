@@ -14,6 +14,7 @@ body {
   color: rgb(223, 215, 215);
 }
 .header {
+  z-index: 1000;
   color: white;
   position: fixed;
   left: 0;
