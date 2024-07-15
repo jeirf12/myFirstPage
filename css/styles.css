@@ -141,23 +141,19 @@ input:checked + .slider::before {
 .content-acerca, .content-servicios, .content-portafolio, .footer {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100vh;
   justify-content: center;
+  width: 100vw;
 }
 .content-acerca {
   padding-top: 3%;
 }
-.content-servicios {
-  padding-top: 3%;
-  padding-bottom: 3%;
+.content-acerca, .content-servicios {
+  height: 100vh;
 }
-.content-portafolio {
-  padding-top: 3%;
-  padding-bottom: 3%;
-}
+.content-servicios,
+.content-portafolio,
 .footer {
-  padding-top: 3%;
+  padding-top: 5%;
 }
 .about {
   display: flex;
@@ -219,6 +215,7 @@ h2 {
   height: 1px;
   background: #c0c0c0;
   margin: 0 auto;
+  margin-top: 2%;
 }
 .n-services > figure {
   display: flex;
@@ -232,26 +229,37 @@ h2 {
   transform: perspective(500px) rotateY(180deg);
   opacity: 0;
 }
+.content-portafolio > .Portafolio {
+  width: 100%;
+}
 .Portafolio-Images > figure {
-  border: thin #c0c0c0 hidden;
+  width: 350px;
   display: flex;
-  flex-flow: column;
-  padding: 5px;
-  max-width: 45.52352048558422vh;
-  margin: auto;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 2% 0;
   cursor: pointer;
-  padding-top: 2%;
+}
+.Portafolio-Images > figure > span {
+  text-align: justify;
+  background-color: rgba(108, 128, 109, 0.9);
+  border-radius: 0.5rem;
+  flex: 1 1 auto;
+}
+.Portafolio-Images > figure > span,
+.Portafolio-Images > figure > figcaption {
+  padding: 2%;
 }
 .n-services > figure > figcaption, .Portafolio-Images > figure > figcaption {
+  display: block;
   background-color: #333;
   color: #c0c0c0;
   font: italic smaller sans-serif;
   font-weight: bold;
-  font-size: 18px;
-  padding: 3px;
+  line-height: 2.5;
   text-align: center;
-  margin-top: 3px;
-  border-radius: 3px;
+  margin-top: 3%;
+  border-radius: 0.5rem;
 }
 .Servicios {
   display: flex;
@@ -264,14 +272,16 @@ h2 {
   border-radius: 50%;
 }
 .Portafolio-Images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5%;
-  padding: 0 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 0 6% 0 8%;
+  gap: 0 2%;
 }
-.Portafolio-Images > figure > img {
-  height: 12rem;
-  border-radius: 12px;
+.body.change-color .Portafolio-Images > figure > img {
+  filter: invert(100%);
+}
+.Portafolio-Images > figure > * {
+  width: 100%;
 }
 form {
   margin: 0 auto;
@@ -303,7 +313,7 @@ select {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 3px solid transparent;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   height: 45px;
   line-height: 18px;
   padding: 10px;
@@ -319,13 +329,13 @@ textarea {
   resize: vertical;
 }
 button {
-  width: 50%;
+  width: 75%;
   height: 45px;
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   background: #000;
   color: #fff;
   line-height: 45px;
