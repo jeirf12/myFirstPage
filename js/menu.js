@@ -3,8 +3,8 @@ const links = document.querySelectorAll('.link-header');
 const menu = document.querySelector('.navigation ul');
 const header = document.getElementById('header');
 const redirectLinks = [ 
-  '/', 
-  '/', 
+  '#', 
+  '#', 
   '#about', 
   '#portfolio', 
   '#services', 
