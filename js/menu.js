@@ -13,30 +13,33 @@ const redirectLinks = [
 
 export const loadMenu = () => {
   addClickEvent(menuButton, toggleMenu);
-  addClickEvent(menuButton, noShowScroll);
   let index = 0;
   for(const link of links) {
-    if(index > 0) addClickEvent(link, toggleMenu);
+    if(index > 0)
+      addClickEvent(link, toggleLinks);
+    else 
+      addClickEvent(link, toggleLinks, true)
+
     addClickEvent(link, openLink, redirectLinks[index]);
     index++;
   }
 }
 
-const noShowScroll = () => {
-  toggleClassList({element: document.body, id: 'not-show-scroll'});
-}
-
 const toggleMenu = () => {
   toggleClassList({element: header, id: 'showHeader'});
   toggleClassList({element: menu, id: 'show'});
-  removeIfExistInClassList({element: document.body, id: 'not-show-scroll'});
+  toggleClassList({element: document.body, id: 'not-show-scroll'});
+}
+
+const toggleLinks = (isFirstElement = false) => {
+  if(!isFirstElement || header.classList.contains('showHeader')) toggleClassList({element: header, id: 'showHeader'});
+  if(!isFirstElement || menu.classList.contains('show')) toggleClassList({element: menu, id: 'show'});
+  if (document.body.classList.contains('not-show-scroll')) {
+    toggleClassList({element: document.body, id: 'not-show-scroll'});
+  }
 }
 
 const toggleClassList = ({element, id}) => element.classList.toggle(id);
-
-const removeIfExistInClassList = ({element, id}) => {
-  if (element.classList.contains(id)) element.classList.remove(id);
-}
 
 const addClickEvent = (element, methodClick, parameter = "") => {
   element.addEventListener("click", addParemeterIfneeded(methodClick, parameter));
