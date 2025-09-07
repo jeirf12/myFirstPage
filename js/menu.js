@@ -13,6 +13,7 @@ const redirectLinks = [
 
 export const loadMenu = () => {
   addClickEvent(menuButton, toggleMenu);
+  addClickEvent(menuButton, noShowScroll);
   let index = 0;
   for(const link of links) {
     if(index > 0) addClickEvent(link, toggleMenu);
@@ -21,13 +22,21 @@ export const loadMenu = () => {
   }
 }
 
-const toggleMenu = () => {
-  toggleClassList({element: header, id: 'showHeader'});
-  toggleClassList({element: menu, id: 'show'});
+const noShowScroll = () => {
   toggleClassList({element: document.body, id: 'not-show-scroll'});
 }
 
+const toggleMenu = () => {
+  toggleClassList({element: header, id: 'showHeader'});
+  toggleClassList({element: menu, id: 'show'});
+  removeIfExistInClassList({element: document.body, id: 'not-show-scroll'});
+}
+
 const toggleClassList = ({element, id}) => element.classList.toggle(id);
+
+const removeIfExistInClassList = ({element, id}) => {
+  if (element.classList.contains(id)) element.classList.remove(id);
+}
 
 const addClickEvent = (element, methodClick, parameter = "") => {
   element.addEventListener("click", addParemeterIfneeded(methodClick, parameter));
