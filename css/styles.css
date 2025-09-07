@@ -450,6 +450,7 @@ header {
       width: 100%;
       display: flex;
       flex-direction: column;
+      gap: 0px;
     }
   }
   .showHeader {
@@ -471,10 +472,19 @@ header {
   }
   header {
     .menu-icon {
+      width: 100%;
       display: inline;
       cursor: pointer;
       color: #4f614f;
       font-size: 50px;
+    }
+    .menu-icon:hover, small:hover {
+      background-color: rgba(144, 140, 56, 1);
+      cursor: pointer;
+    }
+    small {
+      width: 100%;
+      text-align: center;
     }
   }
 }
